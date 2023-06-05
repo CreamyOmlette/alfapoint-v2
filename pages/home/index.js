@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./home.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSwiper } from "swiper/react";
-import SliderButtons from "../../components/slider-nav-button";
+import SliderButtons from "@/components/slider-nav-button";
 import "swiper/css";
 import { IconSlider } from "@/components/icon-slider";
 import { FAQ } from "@/components/faq";
@@ -13,7 +13,9 @@ export default function Home() {
   return (
     <main>
       <section className="h-[100vh] relative">
-        <div className="bg-[url('../public/home/jumbotron.png')] w-[100%] h-[100%] absolute z-0 bg-no-repeat bg-cover" />
+        <div
+          className={`bg-[url('/home/jumbotron.png')] w-[100%] h-[100%] absolute z-0 bg-no-repeat bg-cover`}
+        />
         <div
           className={`w-[100%] h-[100%] absolute z-10 jumbotron ${styles.jumbotron}`}
         />
@@ -283,7 +285,7 @@ export default function Home() {
             prev="left-[25px] top-[255px]"
           ></SliderButtons>
           <SwiperSlide>
-            <div className="h-[560px] bg-[url('../public/home/vlad.png')] bg-no-repeat relative bg-cover">
+            <div className="h-[560px] bg-[url('/home/vlad.png')] bg-no-repeat relative bg-cover">
               <div className="absolute left-[25px] bottom-[25px]">
                 <h2>Vladislav Matvei</h2>
                 <small>CTO</small>
@@ -299,7 +301,7 @@ export default function Home() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="h-[560px] bg-[url('../public/home/dima.png')] bg-no-repeat relative bg-cover">
+            <div className="h-[560px] bg-[url('/home/dima.png')] bg-no-repeat relative bg-cover">
               <div className="absolute left-[25px] bottom-[25px]">
                 <h2>Dumitru Lipceanu</h2>
                 <small>CEO</small>
@@ -315,7 +317,7 @@ export default function Home() {
             </a>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="h-[560px] bg-[url('../public/home/vlad.png')] bg-no-repeat relative bg-cover">
+            <div className="h-[560px] bg-[url('/home/vlad.png')] bg-no-repeat relative bg-cover">
               <div className="absolute left-[25px] bottom-[25px]">
                 <h2>Vladislav Matvei</h2>
                 <small>CTO</small>
@@ -336,7 +338,7 @@ export default function Home() {
         <h1 className="pb-[50px]">Benefits of working with us</h1>
         <div className="flex flex-col gap-[25px] min-[600px]:grid min-[600px]:grid-cols-2 min-[600px]:grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
           <div>
-            <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('../public/home/collab.svg')] bg-no-repeat bg-center mb-[15px]"></div>
+            <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/collab.svg')] bg-no-repeat bg-center mb-[15px]"></div>
             <h2 className="pb-[15px]">Direct collaboration</h2>
             <p>
               Build your own development team in partnership with us, with
@@ -346,7 +348,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('../public/home/reporting.svg')] bg-no-repeat bg-center mb-[15px]"></div>
+            <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/reporting.svg')] bg-no-repeat bg-center mb-[15px]"></div>
             <h2 className="pb-[15px]">Transparent reporting</h2>
             <p>
               Keep your expectations managed with regular, clear progress
@@ -355,7 +357,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('../public/home/best.svg')] bg-no-repeat bg-center mb-[15px]"></div>
+            <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/best.svg')] bg-no-repeat bg-center mb-[15px]"></div>
             <h2 className="pb-[15px]">Only the best</h2>
             <p>
               We are a tech-oriented company with a rigorous selection process.
@@ -364,7 +366,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('../public/home/solutions.svg')] bg-no-repeat bg-center mb-[15px]"></div>
+            <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/solutions.svg')] bg-no-repeat bg-center mb-[15px]"></div>
             <h2 className="pb-[15px]">Customer-tailored solutions</h2>
             <p>
               Our team is well trained in working remotely, especially as an
@@ -384,8 +386,8 @@ export default function Home() {
             effective frameworks and proven approaches.
           </p>
           <p className="opacity-[70%]">
-            If you&apos;re looking for some information, but can&apos;t find it here,
-            please contact us.
+            If you&apos;re looking for some information, but can&apos;t find it
+            here, please contact us.
           </p>
         </div>
         <Swiper
