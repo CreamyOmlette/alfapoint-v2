@@ -94,7 +94,8 @@ export function FAQ() {
           onClick={() => toggleDropDownState(2)}
         >
           <h4 className="pb-[15px]">
-            How can Alfapoint be sure that it's the developer my company needs?
+            How can Alfapoint be sure that it&apos;s the developer my company
+            needs?
           </h4>
           <p
             className={

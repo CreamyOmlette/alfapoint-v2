@@ -135,62 +135,82 @@ export default function Home() {
         <h1 className="text-[#161616] pb-[50px] md:pb-[100px]">
           Services we offer
         </h1>
-        <div className="flex flex-col gap-[25px] md:grid md:grid-cols-2 md-grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
-          <div className="p-[30px] border-[1px] border-[#CCD6E5]">
-            <Image
-              height={70}
-              width={70}
-              alt=""
-              src="/home/custom-software.svg"
-              className="pb-[25px]"
-            ></Image>
-            <h2 className="pb-[25px]">Custom Software development</h2>
-            <p>
-              We work with startups, SMEs & world leading enterprises to build
-              customized software solutions
-            </p>
+        <div className="flex flex-col gap-[50px] lg:gap-[25px] md:grid md:grid-cols-2 md-grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
+          <div className="group relative">
+            <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+              <Image
+                height={70}
+                width={70}
+                alt=""
+                src="/home/custom-software.svg"
+                className="pb-[25px]"
+              ></Image>
+              <h2 className="pb-[25px]">Custom Software development</h2>
+              <p>
+                We work with startups, SMEs & world leading enterprises to build
+                customized software solutions
+              </p>
+            </div>
+            <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+              EXPLORE
+            </h6>
           </div>
-          <div className="p-[30px] border-[1px] border-[#CCD6E5]">
-            <Image
-              height={70}
-              width={70}
-              alt=""
-              src="/home/dedicated-teams.svg"
-              className="pb-[25px]"
-            ></Image>
-            <h2 className="pb-[25px]">Dedicated teams</h2>
-            <p>
-              We grow your team using our development resources and recruiting
-              capabilities
-            </p>
+          <div className="group relative ">
+            <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+              <Image
+                height={70}
+                width={70}
+                alt=""
+                src="/home/dedicated-teams.svg"
+                className="pb-[25px]"
+              ></Image>
+              <h2 className="pb-[25px]">Dedicated teams</h2>
+              <p>
+                We grow your team using our development resources and recruiting
+                capabilities
+              </p>
+            </div>
+            <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+              EXPLORE
+            </h6>
           </div>
-          <div className="p-[30px] border-[1px] border-[#CCD6E5]">
-            <Image
-              height={70}
-              width={70}
-              alt=""
-              src="/home/ui:ux.svg"
-              className="pb-[25px]"
-            ></Image>
-            <h2 className="pb-[25px]">UI/UX Design</h2>
-            <p>
-              Our team of experienced product designers & developers help you
-              build successful digital products
-            </p>
+          <div className="group relative">
+            <div className="absolute h-full p-[30px] border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+              <Image
+                height={70}
+                width={70}
+                alt=""
+                src="/home/ui:ux.svg"
+                className="pb-[25px]"
+              ></Image>
+              <h2 className="pb-[25px]">UI/UX Design</h2>
+              <p>
+                Our team of experienced product designers & developers help you
+                build successful digital products
+              </p>
+            </div>
+            <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+              EXPLORE
+            </h6>
           </div>
-          <div className="p-[30px] border-[1px] border-[#CCD6E5]">
-            <Image
-              height={70}
-              width={70}
-              alt=""
-              src="/home/data-science.svg"
-              className="pb-[25px]"
-            ></Image>
-            <h2 className="pb-[25px]">Data science</h2>
-            <p>
-              We help organizations adopt data driven insights and automated
-              reporting for faster decision making
-            </p>
+          <div className="group relative">
+            <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+              <Image
+                height={70}
+                width={70}
+                alt=""
+                src="/home/data-science.svg"
+                className="pb-[25px]"
+              ></Image>
+              <h2 className="pb-[25px]">Data science</h2>
+              <p>
+                We help organizations adopt data driven insights and automated
+                reporting for faster decision making
+              </p>
+            </div>
+            <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+              EXPLORE
+            </h6>
           </div>
         </div>
       </section>
@@ -364,7 +384,7 @@ export default function Home() {
             effective frameworks and proven approaches.
           </p>
           <p className="opacity-[70%]">
-            If you're looking for some information, but can't find it here,
+            If you&apos;re looking for some information, but can&apos;t find it here,
             please contact us.
           </p>
         </div>
