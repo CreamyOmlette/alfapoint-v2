@@ -20,7 +20,7 @@ module.exports = {
         "grey-3": "rgba(204, 214, 229, 1)",
       },
       backgroundImage: {
-        "footer-arrow": "url('../public/footer-arrow.svg')",
+        "footer-arrow": "url('/footer-arrow.svg')",
       },
     },
   },
