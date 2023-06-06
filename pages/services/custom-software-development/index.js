@@ -169,7 +169,7 @@ export default function CustomSoftwareDevelopment() {
       <section className="py-[50px] px-[25px] lg:px-[50] bg-regal-blue md:grid md:grid-cols-6 md:gap-[50px] md:pt-[100px] md:px-[50px]">
         <TechStack></TechStack>
       </section>
-      <section className="py-[50px] px-[25px] lg:px-[50] text-black md:grid md:grid-cols-2 md:gap-[50px]">
+      <section className="py-[50px] px-[25px] lg:px-[50px] text-black md:grid md:grid-cols-2 md:gap-[50px]">
         <div>
           <h1 className="pb-[25px]">Teams composition</h1>
           <p className="pb-[25px]">
@@ -239,7 +239,7 @@ export default function CustomSoftwareDevelopment() {
       </section>
       <section className="py-[50px] px-[25px] lg:px-[50] text-black bg-grey-3">
         <h1 className="pb-[100px]">What is the process?</h1>
-        <div className="flex flex-col items-center gap-[25px] md:flex-row md:gap-[12.5px] justify-center">
+        <div className="flex flex-col items-center gap-[25px] md:flex-row md:gap-[12.5px] justify-between">
           <div>
             <Image
               width={182}
