@@ -12,40 +12,40 @@ export default function Footer() {
       </div>
       <div>
         <h4 className="pb-[20px]">Services</h4>
-        <ul className="text-[#8E8E8E] leading-[24px]">
-          <li>
+        <ul className="text-[#8E8E8E] leading-[24px] cursor-pointer">
+          <li className="hover:text-white transition-colors ease-out duration-200">
             <small>Custom software development</small>
           </li>
-          <li>
+          <li className="hover:text-white transition-colors ease-out duration-200">
             <small>Dedicated teams</small>
           </li>
-          <li>
+          <li className="hover:text-white transition-colors ease-out duration-200">
             <small>UI/UX Design</small>
           </li>
-          <li>
+          <li className="hover:text-white transition-colors ease-out duration-200">
             <small>Data science</small>
           </li>
-          <li>
+          <li className="hover:text-white transition-colors ease-out duration-200">
             <small>DevOps</small>
           </li>
-          <li>
+          <li className="hover:text-white transition-colors ease-out duration-200">
             <small>Testing and Quality Assurance</small>
           </li>
         </ul>
       </div>
       <div className="max-sm:min-w-[120px]">
         <h4 className="pb-[20px]">Links</h4>
-        <ul className="text-[#8E8E8E] leading-[24px]">
-          <li>
+        <ul className="text-[#8E8E8E] leading-[24px] cursor-pointer">
+          <li className="hover:text-white transition-colors ease-out duration-200">
             <small>Home</small>
           </li>
-          <li>
+          <li className="hover:text-white transition-colors ease-out duration-200">
             <small>Services</small>
           </li>
-          <li>
+          <li className="hover:text-white transition-colors ease-out duration-200">
             <small>Careers</small>
           </li>
-          <li>
+          <li className="hover:text-white transition-colors ease-out duration-200">
             <small>Contact</small>
           </li>
         </ul>

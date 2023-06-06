@@ -29,8 +29,15 @@ export default function Home() {
             Alfapoint as their software engineering partner. We provide them
             dedicated teams and deliver scalable products that users love.
           </h3>
-          <button className="bg-white rounded pl-[25px] pr-[45px] leading-[40px] text-black">
-            BOOK A CALL
+          <button className="bg-white rounded pl-[25px] pr-[25px] leading-[40px] text-black">
+            <h5 className="inline-block">BOOK A CALL</h5>
+            <Image
+              height={12}
+              width={15}
+              alt=""
+              src="/button-arrow.svg"
+              className="inline-block ml-[6px] h-[11.58px]"
+            ></Image>
           </button>
         </div>
         <div className="max-md:hidden absolute bottom-[100px] left-[50px] pr-[50px] top-[20%] z-10 flex justify-between items-center gap-[50px]">
@@ -38,8 +45,15 @@ export default function Home() {
             <h1 className="pb-[25px]">
               Cost-efficient solutions for tech companies worldwide
             </h1>
-            <button className="bg-white rounded pl-[25px] pr-[45px] leading-[40px] text-black">
-              BOOK A CALL
+            <button className="bg-white rounded pl-[25px] pr-[25px] leading-[40px] text-black">
+              <h5 className="inline-block">BOOK A CALL</h5>
+              <Image
+                height={12}
+                width={15}
+                alt=""
+                src="/button-arrow.svg"
+                className="inline-block ml-[6px] h-[11.58px]"
+              ></Image>
             </button>
           </div>
 
@@ -177,8 +191,9 @@ export default function Home() {
               EXPLORE
             </h6>
           </div>
+
           <div className="group relative">
-            <div className="absolute h-full p-[30px] border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+            <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
               <Image
                 height={70}
                 width={70}

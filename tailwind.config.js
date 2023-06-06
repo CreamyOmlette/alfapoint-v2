@@ -42,6 +42,9 @@ module.exports = {
         ".icon-mobile": {
           mask: "url('/services/mobile.svg') no-repeat center/contain",
         },
+        ".icon-arrow": {
+          mask: "url('/home/slider-arrow.svg') no-repeat center/contain",
+        },
       });
     }),
   ],

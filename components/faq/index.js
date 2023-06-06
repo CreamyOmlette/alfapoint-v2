@@ -61,7 +61,9 @@ export function FAQ() {
             key={0}
             onClick={() => toggleDropDownState(0)}
           >
-            <h4 className="pb-[15px]">How long does it take to get started?</h4>
+            <h4 className="pb-[15px] cursor-pointer">
+              How long does it take to get started?
+            </h4>
             <p
               className={
                 "max-h-0 overflow-hidden transition-all ease-in-out duration-150" +
@@ -80,7 +82,7 @@ export function FAQ() {
             key={1}
             onClick={() => toggleDropDownState(1)}
           >
-            <h4 className="pb-[15px]">
+            <h4 className="pb-[15px] cursor-pointer">
               What type of technical expertise do you offer?
             </h4>
             <p
@@ -101,7 +103,7 @@ export function FAQ() {
             key={2}
             onClick={() => toggleDropDownState(2)}
           >
-            <h4 className="pb-[15px]">
+            <h4 className="pb-[15px] cursor-pointer">
               How can Alfapoint be sure that it&apos;s the developer my company
               needs?
             </h4>
@@ -123,7 +125,7 @@ export function FAQ() {
             key={3}
             onClick={() => toggleDropDownState(3)}
           >
-            <h4 className="pb-[15px]">
+            <h4 className="pb-[15px] cursor-pointer">
               Does Alfapoint take care of leading the project?
             </h4>
 
@@ -145,7 +147,7 @@ export function FAQ() {
             key={4}
             onClick={() => toggleDropDownState(4)}
           >
-            <h4 className="pb-[15px]">
+            <h4 className="pb-[15px] cursor-pointer">
               Do the software engineers speak English?
             </h4>
             <p
