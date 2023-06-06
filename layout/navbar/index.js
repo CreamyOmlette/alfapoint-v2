@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Navbar() {
   return (
     <nav className="flex justify-between w-100 py-[50px] max-md:px-[25px] px-[50px] absolute left-0 top-0 w-[100%] z-50">
-      <Image width={129.17} height={30} alt="" src="logo.svg" />
+      <Image width={129.17} height={30} alt="" src="/logo.svg" />
       <ul className="flex justify-around space-x-[40px] items-center max-md:hidden">
         <li>
           <Link href="/home">home</Link>

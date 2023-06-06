@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-wrap justify-between pt-[60px] pb-[90px] gap-y-[50px] gap-x-[25px] max-sm:flex-col-reverse max-md:px-[25px] px-[50px] bg-[#1b1b1b]">
       <div className="max-sm:flex max-sm:flex-col max-sm:items-center">
-        <Image alt="" width={80} height={56.88} src="footer-logo.svg"></Image>
+        <Image alt="" width={80} height={56.88} src="/footer-logo.svg"></Image>
         <small className="text-[#8E8E8E]">
           © 2023, Alfapoint. <br></br>
           All rights Reserved
