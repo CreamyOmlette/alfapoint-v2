@@ -98,8 +98,15 @@ export default function Home() {
               <h5>projects delivered</h5>
             </div>
           </div>
-          <button className="text-white rounded bg-regal-blue pl-[25px] pr-[45px] leading-[40px] mb-[50px]">
-            GET IN TOUCH
+          <button className="text-white rounded bg-regal-blue pl-[25px] pr-[25px] leading-[40px] mb-[50px]">
+            <h5 className="inline-block">GET IN TOUCH</h5>
+            <Image
+              height={12}
+              width={15}
+              alt=""
+              src="/button-arrow-white.svg"
+              className="inline-block ml-[6px]"
+            ></Image>
           </button>
         </div>
         <div>
@@ -153,7 +160,7 @@ export default function Home() {
           Services we offer
         </h1>
         <div className="flex flex-col gap-[50px] lg:gap-[25px] md:grid md:grid-cols-2 md-grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
-          <div className="group relative">
+          <div className="group relative cursor-pointer">
             <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
               <Image
                 height={70}
@@ -172,7 +179,7 @@ export default function Home() {
               EXPLORE
             </h6>
           </div>
-          <div className="group relative ">
+          <div className="group relative cursor-pointer">
             <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
               <Image
                 height={70}
@@ -192,7 +199,7 @@ export default function Home() {
             </h6>
           </div>
 
-          <div className="group relative">
+          <div className="group relative cursor-pointer">
             <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
               <Image
                 height={70}
@@ -211,7 +218,7 @@ export default function Home() {
               EXPLORE
             </h6>
           </div>
-          <div className="group relative">
+          <div className="group relative cursor-pointer">
             <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
               <Image
                 height={70}
@@ -306,7 +313,7 @@ export default function Home() {
                 <h2>Vladislav Matvei</h2>
                 <small>CTO</small>
               </div>
-              <a className="absolute right-[25px] bottom-[25px]">
+              <a className="absolute right-[25px] bottom-[25px] cursor-pointer">
                 <Image
                   height={50}
                   width={50}
@@ -323,7 +330,7 @@ export default function Home() {
                 <small>CEO</small>
               </div>
             </div>
-            <a className="absolute right-[25px] bottom-[25px]">
+            <a className="absolute right-[25px] bottom-[25px] cursor-pointer">
               <Image
                 height={50}
                 width={50}
@@ -338,7 +345,7 @@ export default function Home() {
                 <h2>Vladislav Matvei</h2>
                 <small>CTO</small>
               </div>
-              <a className="absolute right-[25px] bottom-[25px]">
+              <a className="absolute right-[25px] bottom-[25px] cursor-pointer">
                 <Image
                   height={50}
                   width={50}
