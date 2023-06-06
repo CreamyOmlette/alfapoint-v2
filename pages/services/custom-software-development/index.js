@@ -22,8 +22,15 @@ export default function CustomSoftwareDevelopment() {
               <h1 className="pb-[25px] leading-[50px]">
                 Software development with a team that understands your business
               </h1>
-              <button className="bg-white rounded pl-[25px] pr-[45px] leading-[40px] text-black">
-                BOOK A CALL
+              <button className="bg-white rounded pl-[25px] pr-[25px] leading-[40px] text-black">
+                <h5 className="inline-block">BOOK A CALL</h5>
+                <Image
+                  height={12}
+                  width={15}
+                  alt=""
+                  src="/button-arrow.svg"
+                  className="inline-block ml-[6px] h-[11.58px]"
+                ></Image>
               </button>
             </div>
           </div>
@@ -55,8 +62,15 @@ export default function CustomSoftwareDevelopment() {
             </ul>
             <div className="relative">
               <div className="h-full w-[163px] rounded-[4px] bg-regal-blue left-[5px] absolute z-[-1]"></div>
-              <button className="leading-[40px] rounded-[4px] pl-[25px] pr-[45px] bg-lime-green">
-                GET IN TOUCH
+              <button className="leading-[40px] rounded-[4px] pl-[25px] pr-[25px] bg-lime-green">
+                <h5 className="inline-block">GET IN TOUCH</h5>
+                <Image
+                  height={12}
+                  width={15}
+                  alt=""
+                  src="/button-arrow.svg"
+                  className="inline-block ml-[6px]"
+                ></Image>
               </button>
             </div>
           </section>
