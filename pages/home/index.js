@@ -306,6 +306,9 @@ export default function Home() {
           <SliderButtons
             next="right-[25px] top-[255px]"
             prev="left-[25px] top-[255px]"
+            hoverColor="group-hover:bg-regal-blue"
+            borderHoverColor="hover:border-white"
+            bgHoverColor="hover:bg-white"
           ></SliderButtons>
           <SwiperSlide>
             <div className="h-[560px] bg-[url('/home/vlad.png')] bg-no-repeat relative bg-cover">

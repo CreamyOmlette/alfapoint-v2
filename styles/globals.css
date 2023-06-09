@@ -86,3 +86,15 @@ li {
     display: none !important;
   }
 }
+
+.video-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(44, 103, 255, 0.85) 44.27%,
+    rgba(44, 94, 255, 0.3825) 100%
+  );
+}
+
+.swiper-slide {
+  height: auto !important;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export function FAQ() {
+export function FAQ(props) {
   const [tab, setTab] = useState("dedicated-teams");
   const [dropdownState, setState] = useState({
     "dedicated-teams": [false, false, false, false, false],
@@ -16,41 +16,48 @@ export function FAQ() {
       <h1 className="pt-[50px] pb-[25px] md:hidden">
         Frequently asked questions
       </h1>
-      <div className="relative h-[37px] mb-[56px] md:mt-[70px]">
-        <div className="bg-white rounded-[50px] leading-[35px] inline-block relative md:absolute md:right-0 md:top-0">
-          <div
-            className={
-              "rounded-[50px] h-[37px] absolute bg-black z-0 transition-all ease-in-out duration-150" +
-              (tab == "dedicated-teams"
-                ? " left-0 w-[144px]"
-                : " left-[144px] w-[126px]")
-            }
-          ></div>
-          <button
-            className="px-[24px] text-white"
-            onClick={() => setTab("dedicated-teams")}
-          >
-            <h6
+      {props.hidePagination ? (
+        <></>
+      ) : (
+        <div className="relative h-[37px] mb-[56px] md:mt-[70px]">
+          <div className="bg-white rounded-[50px] leading-[35px] inline-block relative md:absolute md:right-0 md:top-0">
+            <div
               className={
-                "relative z-10" +
-                (tab == "dedicated-teams" ? " text-white" : " text-black")
+                "rounded-[50px] h-[37px] absolute bg-black z-0 transition-all ease-in-out duration-150" +
+                (tab == "dedicated-teams"
+                  ? " left-0 w-[144px]"
+                  : " left-[144px] w-[126px]")
               }
+            ></div>
+            <button
+              className="px-[24px] text-white"
+              onClick={() => setTab("dedicated-teams")}
             >
-              dedicated teams
-            </h6>
-          </button>
-          <button className="px-[24px]" onClick={() => setTab("project-based")}>
-            <h6
-              className={
-                "relative z-10" +
-                (tab == "project-based" ? " text-white" : " text-black")
-              }
+              <h6
+                className={
+                  "relative z-10" +
+                  (tab == "dedicated-teams" ? " text-white" : " text-black")
+                }
+              >
+                dedicated teams
+              </h6>
+            </button>
+            <button
+              className="px-[24px]"
+              onClick={() => setTab("project-based")}
             >
-              project-based
-            </h6>
-          </button>
+              <h6
+                className={
+                  "relative z-10" +
+                  (tab == "project-based" ? " text-white" : " text-black")
+                }
+              >
+                project-based
+              </h6>
+            </button>
+          </div>
         </div>
-      </div>
+      )}
       <div className="flex">
         <h1 className="min-w-[380px] max-md:hidden">
           Frequently asked questions

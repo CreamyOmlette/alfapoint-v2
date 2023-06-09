@@ -2,13 +2,12 @@ import { TechStack } from "@/components/tech-stack";
 import Image from "next/image";
 import { FAQ } from "@/components/faq";
 import "swiper/css";
-import styles from "./style.module.css";
 
 export default function CustomSoftwareDevelopment() {
   return (
     <main>
-      <div className="md:flex">
-        <div>
+      <div className="md:grid md:grid-cols-5">
+        <div className="md:col-span-3">
           <div className="px-[25px] md:px-[50px] bg-regal-blue h-[100vh] relative">
             <div className="absolute bottom-[100px] left-[25px] pr-[25px]">
               <div className="pb-[15px] flex gap-[13px] flex-wrap">
@@ -75,21 +74,14 @@ export default function CustomSoftwareDevelopment() {
             </div>
           </section>
         </div>
-        <div className="w-[100vw] max-md:hidden relative">
+        <div className="max-md:hidden relative col-span-2">
           <div className="h-[130px] bg-regal-blue"></div>
           <div className="sticky top-0 overflow-hidden">
             <div className="relative">
-              <video
-                autoPlay
-                muted
-                loop
-                className="h-[100vh] w-[50vw] object-cover"
-              >
+              <video autoPlay muted loop className="h-[100vh] object-cover">
                 <source src="/services/0.mp4" type="video/mp4" />
               </video>
-              <div
-                className={`absolute top-0 h-full w-full z-10 ${styles["video-overlay"]}`}
-              ></div>
+              <div className="absolute top-0 h-full w-full z-10 video-overlay"></div>
             </div>
           </div>
         </div>

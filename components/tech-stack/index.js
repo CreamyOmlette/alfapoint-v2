@@ -30,6 +30,9 @@ export function TechStack() {
         <SliderButtons
           next="right-0 top-0"
           prev="right-[75px] top-0"
+          hoverColor="group-hover:bg-regal-blue"
+          borderHoverColor="hover:border-white"
+          bgHoverColor="hover:bg-white"
         ></SliderButtons>
         <SwiperSlide className="pt-[75px]">
           <Image
