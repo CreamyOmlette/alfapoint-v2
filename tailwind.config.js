@@ -45,6 +45,15 @@ module.exports = {
         ".icon-arrow": {
           mask: "url('/home/slider-arrow.svg') no-repeat center/contain",
         },
+        ".logo-mask": {
+          mask: "url('/logo.svg') no-repeat center/contain",
+        },
+        ".btn-arrow": {
+          mask: "url('/nav-arrow.svg') no-repeat center/contain",
+        },
+        ".burger-menu": {
+          mask: "url('/burger-menu.svg') no-repeat center/contain",
+        },
       });
     }),
   ],
