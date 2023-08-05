@@ -86,9 +86,6 @@ export default function DataScience() {
             </div>
           </div>
         </div>
-        <section className="bg-grey-3 px-[25px] md:px-[50px] text-[#161616] py-[50px] border-t-[2px] border-white">
-          <FAQ hidePagination={true}></FAQ>
-        </section>
       </main>
     </main>
   );
