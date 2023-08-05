@@ -34,7 +34,7 @@ export default function Navbar() {
       <div
         className={
           (scroll
-            ? "bg-white h-[75px] pt-[22px] pb-[9px] fixed "
+            ? "bg-white h-[75px] pt-[22px] pb-[22px] fixed "
             : "py-[50px] absolute ") +
           "flex justify-between max-md:px-[25px] px-[50px] left-0 top-0 w-[100vw] z-50 items-center transition-all duration-150 ease-out"
         }
@@ -66,17 +66,6 @@ export default function Navbar() {
             ></div>
           </li>
           <li className="group relative">
-            <Link href="/home">about us</Link>
-            <div
-              className={
-                (scroll
-                  ? "bg-[#4B4B4B] bottom-[-10px] "
-                  : "bg-white bottom-[-15px] ") +
-                "transition-all ease-in-out duration-200 group-hover:min-w-[25px] min-w-[0px] h-[2px] absolute bottom-[-15px] left-[calc(50%-12.5px)]"
-              }
-            ></div>
-          </li>
-          <li className="group relative">
             <Link href="/careers">careers</Link>
             <div
               className={
@@ -91,8 +80,8 @@ export default function Navbar() {
             <h4>services</h4>
             <ul
               className={
-                (scroll ? "top-[44px]" : "top-[37.4px]") +
-                " absolute left-[calc(50%-87.5px)] w-[175px] opacity-[0%] group-hover:opacity-[100%] transition-opacity duration-100 ease-in-out"
+                (scroll ? "pt-[26.5px]" : "pt-[37.4px] top-0") +
+                " absolute hidden left-[calc(50%-87.5px)] w-[175px] opacity-[0%] group-hover:block group-hover:opacity-[100%] transition-opacity duration-100 ease-in-out"
               }
             >
               <li className="text-[#171717] py-[13px] px-[15px] border-b-[1px] border-b-regal-blue bg-white hover:bg-regal-blue hover:text-white transition-colors duration-150 ease-in-out">
@@ -111,7 +100,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="text-[#171717] py-[13px] px-[15px] border-b-[1px] border-b-regal-blue bg-white hover:bg-regal-blue hover:text-white transition-colors duration-150 ease-in-out">
-                <Link href="/data-science">
+                <Link href="/services/data-science">
                   <h5>Data science</h5>
                 </Link>
               </li>
@@ -168,14 +157,6 @@ export default function Navbar() {
               onClick={() => setBurgerMenuActive(!burgerMenuActive)}
             >
               <h2>Home</h2>
-            </Link>
-          </li>
-          <li className="py-[25px] border-t-[1px] border-white">
-            <Link
-              href="/home"
-              onClick={() => setBurgerMenuActive(!burgerMenuActive)}
-            >
-              <h2>About us</h2>
             </Link>
           </li>
           <li className="py-[25px] border-t-[1px] border-white">

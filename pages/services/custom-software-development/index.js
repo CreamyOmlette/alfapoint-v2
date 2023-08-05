@@ -2,8 +2,63 @@ import { TechStack } from "@/components/tech-stack";
 import Image from "next/image";
 import { FAQ } from "@/components/faq";
 import "swiper/css";
+import { useState } from "react";
 
 export default function CustomSoftwareDevelopment() {
+  const [activeService, setActiveService] = useState(2);
+  const services = [
+    {
+      header: "",
+      tags: [],
+      paragraphs: [],
+    },
+    { header: "", tags: [], paragraphs: [] },
+    {
+      header: "Quality assurance",
+      tags: ["Manual", "Automated"],
+      paragraphs: [
+        "Our quality assurance specialists bring peace of mind when it comes to launching bug free product to your users.",
+        "With the consistent, quick releases of new versions, the importance of streamlined quality assurance processes is the key to not letting bugs interrupt your product from bringing value to users.",
+      ],
+    },
+    { header: "", tags: [], paragraphs: [] },
+  ];
+  const faq = {
+    "project-based": [
+      [
+        "How does the project engagement process work?",
+        "The project engagement process involves initial discussions to understand your requirements, followed by project scoping, development, and delivery phases.",
+      ],
+      [
+        "What is the typical duration of a software development project?",
+        "The duration of a software development project varies based on its complexity and scope. While smaller projects may take a few months to complete, larger and more complex projects can span several years. At our company, we prioritize long-term or mid-term engagements, allowing us to collaborate closely with our clients, establish clear project timelines, and deliver high-quality software solutions within agreed timeframes.",
+      ],
+      [
+        "How do you ensure project requirements are understood and met?",
+        "We carefully discuss and document your project requirements, taking into account multiple rounds of discussions to understand specific information and priorities. This allows us to deliver a tailored solution that precisely aligns with your needs.",
+      ],
+      [
+        "What is the project development methodology followed by your company?",
+        "Our company follows agile development methodologies, enabling iterative and collaborative development, regular feedback, and efficient project management.",
+      ],
+      [
+        "Can I provide feedback and be involved throughout the project?",
+        "We encourage your active involvement throughout the project, providing regular updates, seeking feedback, and incorporating your suggestions to ensure project success.",
+      ],
+      [
+        "How do you handle changes or updates during the project?",
+        "We handle changes or updates through a change management process, assessing their impact, discussing options, and implementing approved modifications to keep the project on track.",
+      ],
+      [
+        "What is the estimated timeline for delivering the final product?",
+        "The estimated timeline for delivering the final product depends on project complexity, size, and specific requirements, and we provide a projected timeline during the scoping phase.",
+      ],
+      [
+        "How do you ensure the confidentiality and security of our project?",
+        "We prioritize the confidentiality and security of your project, implementing strict measures to protect sensitive information and using secure infrastructure throughout the development process.",
+      ],
+    ],
+  };
   return (
     <main>
       <div className="md:grid md:grid-cols-5">
@@ -79,7 +134,7 @@ export default function CustomSoftwareDevelopment() {
           <div className="sticky top-0 overflow-hidden">
             <div className="relative">
               <video autoPlay muted loop className="h-[100vh] object-cover">
-                <source src="/services/0.mp4" type="video/mp4" />
+                <source src="/services/videos/1.mp4" type="video/mp4" />
               </video>
               <div className="absolute top-0 h-full w-full z-10 video-overlay"></div>
             </div>
@@ -96,28 +151,28 @@ export default function CustomSoftwareDevelopment() {
         <h1 className="pb-[50px]">What can we do</h1>
         <div className="flex flex-col md:grid md:grid-cols-5 gap-[50px]">
           <div className="md:col-span-3 md:order-2">
-            <h2 className="pb-[15px]">Quality assurance</h2>
+            <h2 className="pb-[15px]">{services[activeService].header}</h2>
             <div className="text-[#3D8CFF] leading-[23px] flex gap-[15px] pb-[25px]">
-              <h6 className="px-[15px] border-[#3D8CFF] rounded-[50px] border-[1px]">
-                Manual
-              </h6>
-              <h6 className="px-[15px] border-[#3D8CFF] rounded-[50px] border-[1px]">
-                Automated
-              </h6>
+              {services[activeService].tags.map((t, i) => (
+                <h6
+                  key={"tag-" + i}
+                  className="px-[15px] border-[#3D8CFF] rounded-[50px] border-[1px]"
+                >
+                  {t}
+                </h6>
+              ))}
             </div>
-            <p className="pb-[23px]">
-              Our quality assurance specialists bring peace of mind when it
-              comes to launching bug free product to your users.
-            </p>
-            <p>
-              With the consistent, quick releases of new versions, the
-              importance of streamlined quality assurance processes is the key
-              to not letting bugs interrupt your product from bringing value to
-              users.
-            </p>
+            {services[activeService].paragraphs.map((p, i) => (
+              <p key={"paragraph-" + i} className={i == 0 ? "pb-[23px]" : ""}>
+                {p}
+              </p>
+            ))}
           </div>
           <ul className="flex flex-col gap-[2px] md:col-span-2 md:order-1">
-            <li className="group py-[25px] pl-[25px] pr-[20px] bg-grey-1 hover:bg-regal-blue hover:text-white flex justify-between leading-[35px] relative transition-all ease-in-out duration-100">
+            <li
+              onClick={() => setActiveService(0)}
+              className="group py-[25px] pl-[25px] pr-[20px] bg-grey-1 hover:bg-regal-blue hover:text-white flex justify-between leading-[35px] relative transition-all ease-in-out duration-100"
+            >
               <Image
                 height={12}
                 width={15}
@@ -130,7 +185,10 @@ export default function CustomSoftwareDevelopment() {
               </h4>
               <div className="w-[35px] h-[35px] icon-web bg-black group-hover:bg-white ease-in-out duration-100"></div>
             </li>
-            <li className="group py-[25px] pl-[25px] pr-[20px] bg-grey-1 hover:bg-regal-blue hover:text-white flex justify-between leading-[35px] relative transition-all ease-in-out duration-100">
+            <li
+              onClick={() => setActiveService(1)}
+              className="group py-[25px] pl-[25px] pr-[20px] bg-grey-1 hover:bg-regal-blue hover:text-white flex justify-between leading-[35px] relative transition-all ease-in-out duration-100"
+            >
               <Image
                 height={12}
                 width={15}
@@ -143,7 +201,10 @@ export default function CustomSoftwareDevelopment() {
               </h4>
               <div className="w-[35px] h-[35px] icon-mobile bg-black group-hover:bg-white ease-in-out duration-100"></div>
             </li>
-            <li className="group py-[25px] pl-[25px] pr-[20px] bg-grey-1 hover:bg-regal-blue hover:text-white flex justify-between leading-[35px] relative transition-all ease-in-out duration-100">
+            <li
+              onClick={() => setActiveService(2)}
+              className="group py-[25px] pl-[25px] pr-[20px] bg-grey-1 hover:bg-regal-blue hover:text-white flex justify-between leading-[35px] relative transition-all ease-in-out duration-100"
+            >
               <Image
                 height={12}
                 width={15}
@@ -156,7 +217,10 @@ export default function CustomSoftwareDevelopment() {
               </h4>
               <div className="w-[35px] h-[35px] icon-qa bg-black group-hover:bg-white ease-in-out duration-100"></div>
             </li>
-            <li className="group py-[25px] pl-[25px] pr-[20px] bg-grey-1 hover:bg-regal-blue hover:text-white flex justify-between leading-[35px] relative transition-all ease-in-out duration-100">
+            <li
+              onClick={() => setActiveService(3)}
+              className="group py-[25px] pl-[25px] pr-[20px] bg-grey-1 hover:bg-regal-blue hover:text-white flex justify-between leading-[35px] relative transition-all ease-in-out duration-100"
+            >
               <Image
                 height={12}
                 width={15}
@@ -345,8 +409,8 @@ export default function CustomSoftwareDevelopment() {
           </div>
         </div>
       </section>
-      <section className="bg-grey-3 px-[25px] md:px-[50px] text-[#161616] pb-[50px] border-t-[2px] border-white">
-        <FAQ></FAQ>
+      <section className="bg-grey-3 px-[25px] md:px-[50px] text-[#161616] pb-[50px] border-t-[2px] border-white md:pt-[100px]">
+        <FAQ hidePagination={true} faq={faq}></FAQ>
       </section>
     </main>
   );

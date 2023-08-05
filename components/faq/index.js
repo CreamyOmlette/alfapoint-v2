@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 export function FAQ(props) {
-  const [tab, setTab] = useState("dedicated-teams");
+  const [tab, setTab] = useState(Object.keys(props.faq)[0]);
   const [dropdownState, setState] = useState({
-    "dedicated-teams": [false, false, false, false, false],
-    "project-based": [],
+    "dedicated-teams": Array(props.faq["dedicated-teams"]?.length).fill(false),
+    "project-based": Array(props.faq["project-based"]?.length).fill(false),
   });
   const toggleDropDownState = (key) => {
     let tempDropdownState = { ...dropdownState };
@@ -63,113 +63,25 @@ export function FAQ(props) {
           Frequently asked questions
         </h1>
         <ul>
-          <li
-            className="border-b-[1px] border-black"
-            key={0}
-            onClick={() => toggleDropDownState(0)}
-          >
-            <h4 className="pb-[15px] cursor-pointer">
-              How long does it take to get started?
-            </h4>
-            <p
+          {props.faq[tab].map((e, i) => (
+            <li
               className={
-                "max-h-0 overflow-hidden transition-all ease-in-out duration-150" +
-                (dropdownState["dedicated-teams"][0]
-                  ? " max-h-[500px] mb-[15px]"
-                  : "")
+                (i !== 0 ? "pt-[15px] " : "") + "border-b-[1px] border-black"
               }
+              key={i}
+              onClick={() => toggleDropDownState(i)}
             >
-              We can match the right developer to your company within days, not
-              weeks or months. We will present as many relevant, pre-vetted
-              candidates as necessary and the choice is always yours.
-            </p>
-          </li>
-          <li
-            className="pt-[15px] border-b-[1px] border-black"
-            key={1}
-            onClick={() => toggleDropDownState(1)}
-          >
-            <h4 className="pb-[15px] cursor-pointer">
-              What type of technical expertise do you offer?
-            </h4>
-            <p
-              className={
-                "max-h-0 overflow-hidden transition-all ease-in-out duration-150" +
-                (dropdownState["dedicated-teams"][1]
-                  ? " max-h-[500px] mb-[15px]"
-                  : "")
-              }
-            >
-              We can match the right developer to your company within days, not
-              weeks or months. We will present as many relevant, pre-vetted
-              candidates as necessary and the choice is always yours.
-            </p>
-          </li>
-          <li
-            className="pt-[15px] border-b-[1px] border-black"
-            key={2}
-            onClick={() => toggleDropDownState(2)}
-          >
-            <h4 className="pb-[15px] cursor-pointer">
-              How can Alfapoint be sure that it&apos;s the developer my company
-              needs?
-            </h4>
-            <p
-              className={
-                "max-h-0 overflow-hidden transition-all ease-in-out duration-150" +
-                (dropdownState["dedicated-teams"][2]
-                  ? " max-h-[500px] mb-[15px]"
-                  : "")
-              }
-            >
-              We can match the right developer to your company within days, not
-              weeks or months. We will present as many relevant, pre-vetted
-              candidates as necessary and the choice is always yours.
-            </p>
-          </li>
-          <li
-            className="pt-[15px] border-b-[1px] border-black"
-            key={3}
-            onClick={() => toggleDropDownState(3)}
-          >
-            <h4 className="pb-[15px] cursor-pointer">
-              Does Alfapoint take care of leading the project?
-            </h4>
-
-            <p
-              className={
-                "max-h-0 overflow-hidden transition-all ease-in-out duration-150" +
-                (dropdownState["dedicated-teams"][3]
-                  ? " max-h-[500px] mb-[15px]"
-                  : "")
-              }
-            >
-              We can match the right developer to your company within days, not
-              weeks or months. We will present as many relevant, pre-vetted
-              candidates as necessary and the choice is always yours.
-            </p>
-          </li>
-          <li
-            className="pt-[15px] border-b-[1px] border-black"
-            key={4}
-            onClick={() => toggleDropDownState(4)}
-          >
-            <h4 className="pb-[15px] cursor-pointer">
-              Do the software engineers speak English?
-            </h4>
-            <p
-              className={
-                "max-h-0 overflow-hidden transition-all ease-in-out duration-150" +
-                (dropdownState["dedicated-teams"][4]
-                  ? " max-h-[500px] mb-[15px]"
-                  : "")
-              }
-            >
-              We can match the right developer to your company within days, not
-              weeks or months. We will present as many relevant, pre-vetted
-              candidates as necessary and the choice is always yours.
-            </p>
-          </li>
+              <h4 className="pb-[15px] cursor-pointer">{e[0]}</h4>
+              <p
+                className={
+                  "max-h-0 overflow-hidden transition-all ease-in-out duration-150" +
+                  (dropdownState[tab][i] ? " max-h-[500px] mb-[15px]" : "")
+                }
+              >
+                {e[1]}
+              </p>
+            </li>
+          ))}
         </ul>
       </div>
     </>

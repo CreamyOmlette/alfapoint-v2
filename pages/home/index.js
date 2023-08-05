@@ -10,7 +10,64 @@ import { TechStack } from "@/components/tech-stack";
 
 export default function Home() {
   const swiper = useSwiper();
-
+  const faq = {
+    "dedicated-teams": [
+      [
+        "How long does it take to get started?",
+        "We will extend your software engineering team within days, not months. Our team is going to present you with a pool of engineers that are just the right fit for your project.",
+      ],
+      [
+        "What type of technical expertise do you offer?",
+        "We specialize in mobile, web, and embedded software development. Our expertise extends to DevOps and QA, ensuring seamless integration, efficient deployment, and thorough testing of our software solutions. With our diverse capabilities, we deliver high-quality, end-to-end software products across multiple platforms.",
+      ],
+      [
+        "How can Alfapoint be sure that it's the developer my company needs?",
+        "At Alfapoint, we ensure we find the right software engineer for your company by understanding your specific needs and carefully matching their skills and experience to your requirements.",
+      ],
+      [
+        "Does Alfapoint take care of leading the project?",
+        "In the dedicated team model, you retain project leadership. Our remote engineers seamlessly integrate into your internal team, while you have complete control over managing their daily activities and tasks, treating them as your own employees.",
+      ],
+      [
+        "What language do the software engineers speak?",
+        "Our software engineers are fluent in English, with a minimum B1 proficiency level. This enables smooth communication and collaboration within our international team as they seamlessly integrate into your project.",
+      ],
+    ],
+    "project-based": [
+      [
+        "How does the project engagement process work?",
+        "The project engagement process involves initial discussions to understand your requirements, followed by project scoping, development, and delivery phases.",
+      ],
+      [
+        "What is the typical duration of a software development project?",
+        "The duration of a software development project varies based on its complexity and scope. While smaller projects may take a few months to complete, larger and more complex projects can span several years. At our company, we prioritize long-term or mid-term engagements, allowing us to collaborate closely with our clients, establish clear project timelines, and deliver high-quality software solutions within agreed timeframes.",
+      ],
+      [
+        "How do you ensure project requirements are understood and met?",
+        "We carefully discuss and document your project requirements, taking into account multiple rounds of discussions to understand specific information and priorities. This allows us to deliver a tailored solution that precisely aligns with your needs.",
+      ],
+      [
+        "What is the project development methodology followed by your company?",
+        "Our company follows agile development methodologies, enabling iterative and collaborative development, regular feedback, and efficient project management.",
+      ],
+      [
+        "Can I provide feedback and be involved throughout the project?",
+        "We encourage your active involvement throughout the project, providing regular updates, seeking feedback, and incorporating your suggestions to ensure project success.",
+      ],
+      [
+        "How do you handle changes or updates during the project?",
+        "We handle changes or updates through a change management process, assessing their impact, discussing options, and implementing approved modifications to keep the project on track.",
+      ],
+      [
+        "What is the estimated timeline for delivering the final product?",
+        "The estimated timeline for delivering the final product depends on project complexity, size, and specific requirements, and we provide a projected timeline during the scoping phase.",
+      ],
+      [
+        "How do you ensure the confidentiality and security of our project?",
+        "We prioritize the confidentiality and security of your project, implementing strict measures to protect sensitive information and using secure infrastructure throughout the development process.",
+      ],
+    ],
+  };
   return (
     <main>
       <section className="h-[100vh] relative">
@@ -242,7 +299,7 @@ export default function Home() {
       <section className="py-[50px] px-[25px] md:px-[50px] bg-regal-blue">
         <h1 className="pb-[50px]">How do we work?</h1>
         <div className="text-black flex flex-col gap-[25px] md:grid md:grid-cols-2 md:grid-rows-1">
-          <div className="p-[25px] lg:pr-[175px] bg-white">
+          <div className="p-[25px] md:p-[50px] lg:pr-[175px] bg-white">
             <Image
               height={100}
               width={100}
@@ -408,7 +465,7 @@ export default function Home() {
       </section>
       <section className="bg-grey-3 px-[25px] md:px-[50px] text-[#161616] pb-[50px]">
         <div className="bg-regal-blue w-full h-[50px] max-md:hidden"></div>
-        <FAQ></FAQ>
+        <FAQ faq={faq}></FAQ>
       </section>
     </main>
   );

@@ -6,6 +6,30 @@ import { IconSlider } from "@/components/icon-slider";
 import { FAQ } from "@/components/faq";
 
 export default function DedicatedTeams() {
+  const faq = {
+    "dedicated-teams": [
+      [
+        "How long does it take to get started?",
+        "We will extend your software engineering team within days, not months. Our team is going to present you with a pool of engineers that are just the right fit for your project.",
+      ],
+      [
+        "What type of technical expertise do you offer?",
+        "We specialize in mobile, web, and embedded software development. Our expertise extends to DevOps and QA, ensuring seamless integration, efficient deployment, and thorough testing of our software solutions. With our diverse capabilities, we deliver high-quality, end-to-end software products across multiple platforms.",
+      ],
+      [
+        "How can Alfapoint be sure that it's the developer my company needs?",
+        "At Alfapoint, we ensure we find the right software engineer for your company by understanding your specific needs and carefully matching their skills and experience to your requirements.",
+      ],
+      [
+        "Does Alfapoint take care of leading the project?",
+        "In the dedicated team model, you retain project leadership. Our remote engineers seamlessly integrate into your internal team, while you have complete control over managing their daily activities and tasks, treating them as your own employees.",
+      ],
+      [
+        "What language do the software engineers speak?",
+        "Our software engineers are fluent in English, with a minimum B1 proficiency level. This enables smooth communication and collaboration within our international team as they seamlessly integrate into your project.",
+      ],
+    ],
+  };
   return (
     <main>
       <div className="md:grid md:grid-cols-5">
@@ -84,7 +108,7 @@ export default function DedicatedTeams() {
           <div className="sticky top-0 overflow-hidden">
             <div className="relative">
               <video autoPlay muted loop className="h-[100vh] object-cover">
-                <source src="/services/0.mp4" type="video/mp4" />
+                <source src="/services/videos/0.mp4" type="video/mp4" />
               </video>
               <div className="absolute top-0 h-full w-full z-10 video-overlay"></div>
             </div>
@@ -319,7 +343,7 @@ export default function DedicatedTeams() {
         </div>
       </section>
       <section className="bg-grey-3 px-[25px] md:px-[50px] text-[#161616] py-[50px] border-t-[2px] border-white">
-        <FAQ hidePagination={true}></FAQ>
+        <FAQ hidePagination={true} faq={faq}></FAQ>
       </section>
     </main>
   );
