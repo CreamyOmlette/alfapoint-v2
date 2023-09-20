@@ -8,11 +8,21 @@ export default function CustomSoftwareDevelopment() {
   const [activeService, setActiveService] = useState(2);
   const services = [
     {
-      header: "",
-      tags: [],
-      paragraphs: [],
+      header: "Web development",
+      tags: ["UI/UX", "CMS", "Backend", "Frontend", "Javascript"],
+      paragraphs: [
+        "Harness the power of the internet with our cutting-edge web development services. We craft user-friendly and visually appealing websites that not only captivate your audience but also align with your business objectives.",
+        "From responsive design to e-commerce platforms, we create digital landscapes that leave a lasting impression.",
+      ],
     },
-    { header: "", tags: [], paragraphs: [] },
+    {
+      header: "Mobile development",
+      tags: ["iOS", "Android", "Cross-platform", "Testing", "Analytics"],
+      paragraphs: [
+        "In the age of mobile connectivity, mobile development services ensure that you're not just a click away, but a tap away from your audience.",
+        "Our experts specialize in crafting engaging and functional mobile applications for various platforms. Whether it's iOS, Android, or cross-platform solutions, we bring your app ideas to life.",
+      ],
+    },
     {
       header: "Quality assurance",
       tags: ["Manual", "Automated"],
@@ -21,7 +31,21 @@ export default function CustomSoftwareDevelopment() {
         "With the consistent, quick releases of new versions, the importance of streamlined quality assurance processes is the key to not letting bugs interrupt your product from bringing value to users.",
       ],
     },
-    { header: "", tags: [], paragraphs: [] },
+    {
+      header: "DevOps",
+      tags: [
+        "CI/CD",
+        "Automation",
+        "Containerization",
+        "Orchestration",
+        "Cloud",
+        "Bare metal",
+      ],
+      paragraphs: [
+        "Streamline your development process with our DevOps services. We integrate development and operations, ensuring faster releases, reduced errors, and efficient collaboration.",
+        "Our team thrives on challenges and is dedicated to bringing your vision to life. Let's work together to transform your ideas into impactful digital solutions. Reach out to us to get started on your project. Your success is our priority.",
+      ],
+    },
   ];
   const faq = {
     "project-based": [

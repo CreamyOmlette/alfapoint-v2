@@ -161,7 +161,7 @@ export default function Navbar() {
           </li>
           <li className="py-[25px] border-t-[1px] border-white">
             <Link
-              href="/home"
+              href="/careers"
               onClick={() => setBurgerMenuActive(!burgerMenuActive)}
             >
               <h2>Careers</h2>

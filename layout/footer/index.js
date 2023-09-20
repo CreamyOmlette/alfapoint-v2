@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -14,45 +15,30 @@ export default function Footer() {
         <h4 className="pb-[20px]">Services</h4>
         <ul className="text-[#8E8E8E] leading-[24px] cursor-pointer">
           <li className="hover:text-white transition-colors ease-out duration-200">
-            <small>Custom software development</small>
+            <Link href="/services/custom-software-development">
+              <small>Custom software development</small>
+            </Link>
           </li>
           <li className="hover:text-white transition-colors ease-out duration-200">
-            <small>Dedicated teams</small>
+            <Link href="/services/dedicated-teams">
+              <small>Dedicated teams</small>
+            </Link>
           </li>
           <li className="hover:text-white transition-colors ease-out duration-200">
-            <small>UI/UX Design</small>
+            <Link href="/services/ui-ux-design">
+              <small>UI/UX Design</small>
+            </Link>
           </li>
           <li className="hover:text-white transition-colors ease-out duration-200">
-            <small>Data science</small>
-          </li>
-          <li className="hover:text-white transition-colors ease-out duration-200">
-            <small>DevOps</small>
-          </li>
-          <li className="hover:text-white transition-colors ease-out duration-200">
-            <small>Testing and Quality Assurance</small>
-          </li>
-        </ul>
-      </div>
-      <div className="max-sm:min-w-[120px]">
-        <h4 className="pb-[20px]">Links</h4>
-        <ul className="text-[#8E8E8E] leading-[24px] cursor-pointer">
-          <li className="hover:text-white transition-colors ease-out duration-200">
-            <small>Home</small>
-          </li>
-          <li className="hover:text-white transition-colors ease-out duration-200">
-            <small>Services</small>
-          </li>
-          <li className="hover:text-white transition-colors ease-out duration-200">
-            <small>Careers</small>
-          </li>
-          <li className="hover:text-white transition-colors ease-out duration-200">
-            <small>Contact</small>
+            <Link href="/services/data-science">
+              <small>Data science</small>
+            </Link>
           </li>
         </ul>
       </div>
       <div>
         <h4 className="pb-[20px]">Locations</h4>
-        <ul className="flex flex-col space-y-[25px]">
+        <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[25px]">
           <li>
             <div className="pl-[55px] bg-footer-arrow bg-no-repeat bg-left bg-center">
               <p className="text-[#8E8E8E]">Republic of Moldova</p>
@@ -76,7 +62,7 @@ export default function Footer() {
       <div className="">
         <h4 className="pb-[35px]">Contact us</h4>
         <h4 className="pb-[25px] text-[#8E8E8E]">info@alfa-point.com</h4>
-        <h4>+40 376 300 359</h4>
+        <h4>+41 22 568 01 59</h4>
       </div>
     </footer>
   );

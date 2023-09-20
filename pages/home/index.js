@@ -71,9 +71,11 @@ export default function Home() {
   return (
     <main>
       <section className="h-[100vh] relative">
-        <div
-          className={`bg-[url('/home/jumbotron.png')] w-[100%] h-[100%] absolute z-0 bg-no-repeat bg-cover`}
-        />
+        <div className={`w-[100%] h-[100%] absolute z-0`}>
+          <video autoPlay muted loop className="w-[100%] h-[100%] object-cover">
+            <source src="/services/videos/0.mp4" type="video/mp4" />
+          </video>
+        </div>
         <div
           className={`w-[100%] h-[100%] absolute z-10 jumbotron ${styles.jumbotron}`}
         />
@@ -400,10 +402,10 @@ export default function Home() {
             </a>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="h-[560px] bg-[url('/home/vlad.png')] bg-no-repeat relative bg-cover">
+            <div className="h-[560px] bg-[url('/home/vitya.jpg')] bg-no-repeat relative bg-cover">
               <div className="absolute left-[25px] bottom-[25px]">
-                <h2>Vladislav Matvei</h2>
-                <small>CTO</small>
+                <h2>Victor Uncuta</h2>
+                <small>Head of BD</small>
               </div>
               <a className="absolute right-[25px] bottom-[25px] cursor-pointer">
                 <Image

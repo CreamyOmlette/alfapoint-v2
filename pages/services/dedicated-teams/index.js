@@ -177,9 +177,9 @@ export default function DedicatedTeams() {
         </div>
       </section>
       <section className="px-[25px] pb-[50px] md:px-[50px]">
-        <h2 className="pb-[25px] text-[#161616]">
+        <h1 className="pb-[25px] text-[#161616]">
           Assemble a team that delivers
-        </h2>
+        </h1>
         <Swiper
           className="relative text-black"
           spaceBetween={25}

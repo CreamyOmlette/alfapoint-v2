@@ -62,7 +62,8 @@ p {
 
 small,
 h5,
-button {
+button,
+td {
   font-size: 14px;
 }
 
