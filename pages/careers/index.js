@@ -1,8 +1,12 @@
-import Image from "next/image";
-import { FAQ } from "@/components/faq";
 import { useState } from "react";
 export default function Careers() {
   const [activeRole, setActiveRole] = useState(0);
+  const scroll2top = () => {
+    window.scrollTo({
+      top: document.getElementById("__next").offsetTop,
+      behavior: "smooth",
+    });
+  };
   const roles = [
     {
       title: "QA Automation (Mid or Senior)",
@@ -137,7 +141,10 @@ export default function Careers() {
                         <tr
                           className="group hover:bg-regal-blue cursor-pointer"
                           key={`role-${i}`}
-                          onClick={() => setActiveRole(i)}
+                          onClick={() => {
+                            setActiveRole(i);
+                            scroll2top();
+                          }}
                         >
                           <td className="w-[15px] border-y-[1px] border-transparent group-hover:border-regal-blue"></td>
                           <td className="py-[10px] pr-[15px] border-b-[1px] border-black border-opacity-[30%] text-[#0087C0] underline group-hover:text-white group-hover:border-regal-blue">

@@ -7,9 +7,16 @@ import "swiper/css";
 import { IconSlider } from "@/components/icon-slider";
 import { FAQ } from "@/components/faq";
 import { TechStack } from "@/components/tech-stack";
+import { PopupModal } from "react-calendly";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const swiper = useSwiper();
+  const [isOpen, setOpen] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
   const faq = {
     "dedicated-teams": [
       [
@@ -70,6 +77,14 @@ export default function Home() {
   };
   return (
     <main>
+      {loaded && (
+        <PopupModal
+          url="https://calendly.com/d-lipceanu/30min"
+          rootElement={document.getElementById("__next")}
+          onModalClose={() => setOpen(false)}
+          open={isOpen}
+        ></PopupModal>
+      )}
       <section className="h-[100vh] relative">
         <div className={`w-[100%] h-[100%] absolute z-0`}>
           <video autoPlay muted loop className="w-[100%] h-[100%] object-cover">
@@ -88,6 +103,7 @@ export default function Home() {
             Alfapoint as their software engineering partner. We provide them
             dedicated teams and deliver scalable products that users love.
           </h3>
+
           <button className="bg-white rounded pl-[25px] pr-[25px] leading-[40px] text-black">
             <h5 className="inline-block">BOOK A CALL</h5>
             <Image
@@ -104,7 +120,10 @@ export default function Home() {
             <h1 className="pb-[25px]">
               Cost-efficient solutions for tech companies worldwide
             </h1>
-            <button className="bg-white rounded pl-[25px] pr-[25px] leading-[40px] text-black">
+            <button
+              className="bg-white rounded pl-[25px] pr-[25px] leading-[40px] text-black"
+              onClick={() => setOpen(true)}
+            >
               <h5 className="inline-block">BOOK A CALL</h5>
               <Image
                 height={12}
@@ -157,7 +176,10 @@ export default function Home() {
               <h5>projects delivered</h5>
             </div>
           </div>
-          <button className="text-white rounded bg-regal-blue pl-[25px] pr-[25px] leading-[40px] mb-[50px]">
+          <button
+            className="text-white rounded bg-regal-blue pl-[25px] pr-[25px] leading-[40px] mb-[50px]"
+            onClick={() => setOpen(true)}
+          >
             <h5 className="inline-block">GET IN TOUCH</h5>
             <Image
               height={12}

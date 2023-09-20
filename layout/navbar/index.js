@@ -2,12 +2,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { useEffect } from "react";
+import { PopupModal } from "react-calendly";
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
   const [burgerMenuActive, setBurgerMenuActive] = useState(false);
   const [scroll, setScroll] = useState(false);
-
+  const [isOpen, setOpen] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
   const handleScroll = () => {
     const scrollval = window.pageYOffset > 1 ? true : false;
     setScroll(scrollval);
@@ -31,6 +36,14 @@ export default function Navbar() {
 
   return (
     <nav>
+      {loaded && (
+        <PopupModal
+          url="https://calendly.com/d-lipceanu/30min"
+          rootElement={document.getElementById("__next")}
+          onModalClose={() => setOpen(false)}
+          open={isOpen}
+        ></PopupModal>
+      )}
       <div
         className={
           (scroll
@@ -112,6 +125,7 @@ export default function Navbar() {
                 (scroll ? "bg-regal-blue text-white" : "bg-white") +
                 " text-regal-blue leading-[40px] pl-[24px] pr-[24px] rounded inline-flex items-center"
               }
+              onClick={() => setOpen(true)}
             >
               <h5 className="inline-block">Let’s work together</h5>
               <div
@@ -229,7 +243,10 @@ export default function Navbar() {
             </div>
           </li>
         </ul>
-        <button className="text-regal-blue leading-[40px] bg-white pl-[24px] pr-[24px] rounded">
+        <button
+          className="text-regal-blue leading-[40px] bg-white pl-[24px] pr-[24px] rounded"
+          onClick={() => setOpen(true)}
+        >
           <h5 className="inline-block">Let’s work together</h5>
           <Image
             height={12}

@@ -1,7 +1,13 @@
 import Image from "next/image";
 import { FAQ } from "@/components/faq";
-
+import { PopupModal } from "react-calendly";
+import { useEffect, useState } from "react";
 export default function UiUxDesign() {
+  const [isOpen, setOpen] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
   const faq = {
     "dedicated-teams": [
       [
@@ -28,6 +34,14 @@ export default function UiUxDesign() {
   };
   return (
     <main>
+      {loaded && (
+        <PopupModal
+          url="https://calendly.com/d-lipceanu/30min"
+          rootElement={document.getElementById("__next")}
+          onModalClose={() => setOpen(false)}
+          open={isOpen}
+        ></PopupModal>
+      )}
       <div className="md:grid md:grid-cols-5">
         <div className="md:col-span-3">
           <div className="px-[25px] md:px-[50px] bg-regal-blue h-[100vh] relative">
@@ -43,7 +57,10 @@ export default function UiUxDesign() {
               <h1 className="pb-[25px] leading-[50px]">
                 Create designs and interfaces that users love
               </h1>
-              <button className="bg-white rounded pl-[25px] pr-[25px] leading-[40px] text-black">
+              <button
+                className="bg-white rounded pl-[25px] pr-[25px] leading-[40px] text-black"
+                onClick={() => setOpen(true)}
+              >
                 <h5 className="inline-block">BOOK A CALL</h5>
                 <Image
                   height={12}
@@ -80,7 +97,10 @@ export default function UiUxDesign() {
             </ul>
             <div className="relative">
               <div className="h-full w-[163px] rounded-[4px] bg-regal-blue left-[5px] absolute z-[-1]"></div>
-              <button className="leading-[40px] rounded-[4px] pl-[25px] pr-[25px] bg-lime-green">
+              <button
+                className="leading-[40px] rounded-[4px] pl-[25px] pr-[25px] bg-lime-green"
+                onClick={() => setOpen(true)}
+              >
                 <h5 className="inline-block">GET IN TOUCH</h5>
                 <Image
                   height={12}

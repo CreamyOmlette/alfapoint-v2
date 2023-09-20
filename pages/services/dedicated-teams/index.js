@@ -4,8 +4,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { IconSlider } from "@/components/icon-slider";
 import { FAQ } from "@/components/faq";
-
+import { PopupModal } from "react-calendly";
+import { useEffect, useState } from "react";
 export default function DedicatedTeams() {
+  const [isOpen, setOpen] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
   const faq = {
     "dedicated-teams": [
       [
@@ -32,6 +38,14 @@ export default function DedicatedTeams() {
   };
   return (
     <main>
+      {loaded && (
+        <PopupModal
+          url="https://calendly.com/d-lipceanu/30min"
+          rootElement={document.getElementById("__next")}
+          onModalClose={() => setOpen(false)}
+          open={isOpen}
+        ></PopupModal>
+      )}
       <div className="md:grid md:grid-cols-5">
         <div className="md:col-span-3">
           <div className="px-[25px] md:px-[50px] bg-regal-blue h-[100vh] relative">
@@ -47,7 +61,10 @@ export default function DedicatedTeams() {
               <h1 className="pb-[25px] leading-[50px]">
                 Scale your business with dedicated development teams
               </h1>
-              <button className="bg-white rounded pl-[25px] pr-[25px] leading-[40px] text-black">
+              <button
+                className="bg-white rounded pl-[25px] pr-[25px] leading-[40px] text-black"
+                onClick={() => setOpen(true)}
+              >
                 <h5 className="inline-block">BOOK A CALL</h5>
                 <Image
                   height={12}
@@ -90,7 +107,10 @@ export default function DedicatedTeams() {
             </ul>
             <div className="relative">
               <div className="h-full w-[163px] rounded-[4px] bg-regal-blue left-[5px] absolute z-[-1]"></div>
-              <button className="leading-[40px] rounded-[4px] pl-[25px] pr-[25px] bg-lime-green">
+              <button
+                className="leading-[40px] rounded-[4px] pl-[25px] pr-[25px] bg-lime-green"
+                onClick={() => setOpen(true)}
+              >
                 <h5 className="inline-block">GET IN TOUCH</h5>
                 <Image
                   height={12}
