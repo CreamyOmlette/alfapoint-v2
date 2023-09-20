@@ -61,9 +61,9 @@ export default function Careers() {
       requirements: () => (
         <>
           <p className="pb-[50px]">
-            - Bachelor's degree in Computer Science or equivalent <br /> - Web
-            services (REST) <br /> - Web technologies (Angular2, Typescript and
-            HTML5) - Linux knowledge (scripting, configuration) <br /> -
+            - Bachelor&apos;s degree in Computer Science or equivalent <br /> -
+            Web services (REST) <br /> - Web technologies (Angular2, Typescript
+            and HTML5) - Linux knowledge (scripting, configuration) <br /> -
             Excellent knowledge of object-oriented programming (OOP). <br /> -
             Experience in version control is preferred <br />- Strong knowledge
             of Javascript, HTML, CSS and related tools / packages
