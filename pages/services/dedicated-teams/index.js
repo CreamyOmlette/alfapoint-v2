@@ -294,6 +294,43 @@ export default function DedicatedTeams() {
               </div>
             </div>
           </SwiperSlide>
+          <SwiperSlide>
+            <div className="pt-[75px] h-full">
+              <div className="p-[25px] border-[1px] border-[#CCD6E5] h-full">
+                <Image
+                  src="/services/infrastructure.svg"
+                  height={50}
+                  width={50}
+                  alt=""
+                  className="pb-[15px]"
+                ></Image>
+                <h2 className="mb-[25px]">Infrastructure</h2>
+                <p className="pb-[15px]">Data Center Engineers</p>
+                <p className="pb-[15px]">DevOps Engineers</p>
+                <p className="pb-[15px]">Database Engineers</p>
+                <p className="pb-[15px]">Cloud Engineers</p>
+                <p>Systems Engineer</p>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="pt-[75px] h-full">
+              <div className="p-[25px] border-[1px] border-[#CCD6E5] h-full">
+                <Image
+                  src="/services/data-science-1.svg"
+                  height={50}
+                  width={50}
+                  alt=""
+                  className="pb-[15px]"
+                ></Image>
+                <h2 className="mb-[25px]">Data science</h2>
+                <p className="pb-[15px]">Machine Learning Engineers</p>
+                <p className="pb-[15px]">Data Engineers</p>
+                <p className="pb-[15px]">AI Engineers</p>
+                <p>NLP Engineers</p>
+              </div>
+            </div>
+          </SwiperSlide>
         </Swiper>
       </section>
       <IconSlider></IconSlider>

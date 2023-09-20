@@ -9,6 +9,7 @@ import { FAQ } from "@/components/faq";
 import { TechStack } from "@/components/tech-stack";
 import { PopupModal } from "react-calendly";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const swiper = useSwiper();
@@ -88,7 +89,7 @@ export default function Home() {
       <section className="h-[100vh] relative">
         <div className={`w-[100%] h-[100%] absolute z-0`}>
           <video autoPlay muted loop className="w-[100%] h-[100%] object-cover">
-            <source src="/services/videos/0.mp4" type="video/mp4" />
+            <source src="/home/home.mp4" type="video/mp4" />
           </video>
         </div>
         <div
@@ -241,83 +242,90 @@ export default function Home() {
           Services we offer
         </h1>
         <div className="flex flex-col gap-[50px] lg:gap-[25px] md:grid md:grid-cols-2 md-grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
-          <div className="group relative cursor-pointer">
-            <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-              <Image
-                height={70}
-                width={70}
-                alt=""
-                src="/home/custom-software.svg"
-                className="pb-[25px]"
-              ></Image>
-              <h2 className="pb-[25px]">Custom Software development</h2>
-              <p>
-                We work with startups, SMEs & world leading enterprises to build
-                customized software solutions
-              </p>
+          <Link href="/services/custom-software-development">
+            <div className="group relative cursor-pointer h-[100%]">
+              <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                <Image
+                  height={70}
+                  width={70}
+                  alt=""
+                  src="/home/custom-software.svg"
+                  className="pb-[25px]"
+                ></Image>
+                <h2 className="pb-[25px]">Custom Software development</h2>
+                <p>
+                  We work with startups, SMEs & world leading enterprises to
+                  build customized software solutions
+                </p>
+              </div>
+              <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                EXPLORE
+              </h6>
             </div>
-            <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-              EXPLORE
-            </h6>
-          </div>
-          <div className="group relative cursor-pointer">
-            <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-              <Image
-                height={70}
-                width={70}
-                alt=""
-                src="/home/dedicated-teams.svg"
-                className="pb-[25px]"
-              ></Image>
-              <h2 className="pb-[25px]">Dedicated teams</h2>
-              <p>
-                We grow your team using our development resources and recruiting
-                capabilities
-              </p>
+          </Link>
+          <Link href="/services/dedicated-teams">
+            <div className="group relative cursor-pointer h-[100%]">
+              <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                <Image
+                  height={70}
+                  width={70}
+                  alt=""
+                  src="/home/dedicated-teams.svg"
+                  className="pb-[25px]"
+                ></Image>
+                <h2 className="pb-[25px]">Dedicated teams</h2>
+                <p>
+                  We grow your team using our development resources and
+                  recruiting capabilities
+                </p>
+              </div>
+              <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                EXPLORE
+              </h6>
             </div>
-            <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-              EXPLORE
-            </h6>
-          </div>
-
-          <div className="group relative cursor-pointer">
-            <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-              <Image
-                height={70}
-                width={70}
-                alt=""
-                src="/home/ui:ux.svg"
-                className="pb-[25px]"
-              ></Image>
-              <h2 className="pb-[25px]">UI/UX Design</h2>
-              <p>
-                Our team of experienced product designers & developers help you
-                build successful digital products
-              </p>
+          </Link>
+          <Link href="/services/ui-ux-design">
+            <div className="group relative cursor-pointer h-[100%]">
+              <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                <Image
+                  height={70}
+                  width={70}
+                  alt=""
+                  src="/home/ui:ux.svg"
+                  className="pb-[25px]"
+                ></Image>
+                <h2 className="pb-[25px]">UI/UX Design</h2>
+                <p>
+                  Our team of experienced product designers & developers help
+                  you build successful digital products
+                </p>
+              </div>
+              <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                EXPLORE
+              </h6>
             </div>
-            <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-              EXPLORE
-            </h6>
-          </div>
-          <div className="group relative cursor-pointer">
-            <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-              <Image
-                height={70}
-                width={70}
-                alt=""
-                src="/home/data-science.svg"
-                className="pb-[25px]"
-              ></Image>
-              <h2 className="pb-[25px]">Data science</h2>
-              <p>
-                We help organizations adopt data driven insights and automated
-                reporting for faster decision making
-              </p>
+          </Link>
+          <Link href="/services/data-science">
+            <div className="group relative cursor-pointer h-[100%]">
+              <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                <Image
+                  height={70}
+                  width={70}
+                  alt=""
+                  src="/home/data-science.svg"
+                  className="pb-[25px]"
+                ></Image>
+                <h2 className="pb-[25px]">Data science</h2>
+                <p>
+                  We help organizations adopt data driven insights and automated
+                  reporting for faster decision making
+                </p>
+              </div>
+              <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                EXPLORE
+              </h6>
             </div>
-            <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-              EXPLORE
-            </h6>
-          </div>
+          </Link>
         </div>
       </section>
       <section className="py-[50px] px-[25px] md:px-[50px] bg-regal-blue">
@@ -397,7 +405,10 @@ export default function Home() {
                 <h2>Vladislav Matvei</h2>
                 <small>CTO</small>
               </div>
-              <a className="absolute right-[25px] bottom-[25px] cursor-pointer">
+              <a
+                className="absolute right-[25px] bottom-[25px] cursor-pointer"
+                href="https://www.linkedin.com/in/vlad-matvei-2b782997/"
+              >
                 <Image
                   height={50}
                   width={50}
@@ -414,7 +425,10 @@ export default function Home() {
                 <small>CEO</small>
               </div>
             </div>
-            <a className="absolute right-[25px] bottom-[25px] cursor-pointer">
+            <a
+              className="absolute right-[25px] bottom-[25px] cursor-pointer"
+              href="https://www.linkedin.com/in/dumitru-lipceanu-9706b693/"
+            >
               <Image
                 height={50}
                 width={50}
@@ -429,7 +443,10 @@ export default function Home() {
                 <h2>Victor Uncuta</h2>
                 <small>Head of BD</small>
               </div>
-              <a className="absolute right-[25px] bottom-[25px] cursor-pointer">
+              <a
+                className="absolute right-[25px] bottom-[25px] cursor-pointer"
+                href="https://www.linkedin.com/in/victoruncuta/"
+              >
                 <Image
                   height={50}
                   width={50}
