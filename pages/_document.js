@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;**script-src 'self' http://onlineerp.solution.quebec 'unsafe-inline' 'unsafe-eval';** "
+          content="script-src 'self' 'wasm-unsafe-eval' 'inline-speculation-rules' https://cdn.sprig.com;"
         />
       </Head>
       <body>
