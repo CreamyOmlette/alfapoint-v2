@@ -8,6 +8,10 @@ export default function Document() {
         <Main />
         <NextScript />
       </body>
+      <meta
+        httpEquiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;**script-src 'self' http://onlineerp.solution.quebec 'unsafe-inline' 'unsafe-eval';** "
+      />
     </Html>
   );
 }
