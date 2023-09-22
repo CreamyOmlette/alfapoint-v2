@@ -78,20 +78,7 @@ export default function DedicatedTeams() {
           </div>
           <section className="px-[25px] py-[50px] md:px-[50px] text-black">
             <h2 className="pb-[25px]">
-              A business model dedicated to your success
-            </h2>
-            <p className="pb-[23px]">
-              These days, every company needs to think like a tech company, yet
-              many business leaders struggle to hire and retain top software
-              development talent.
-            </p>
-            <p className="pb-[50px]">
-              These days, every company needs to think like a tech company, yet
-              many business leaders struggle to hire and retain top software
-              development talent.
-            </p>
-            <h2 className="pb-[25px]">
-              When would you go for a dedicated team?
+            What are the benefits of dedicated teams model?
             </h2>
             <ul className="flex flex-col gap-[15px] leading-[39px] pb-[50px]">
               <li className="pl-[50px] bg-[url('/services/💎.svg')] bg-no-repeat bg-left bg-center">
