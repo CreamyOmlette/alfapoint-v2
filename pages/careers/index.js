@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { roles } from "./roles";
+import { roles } from "../../data/roles";
 export default function Careers() {
   const [activeRole, setActiveRole] = useState(0);
   const scroll2top = () => {
