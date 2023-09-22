@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
+import { fadeIn } from "@/data/animations";
 
 export default function Home() {
   const swiper = useSwiper();
@@ -161,12 +162,7 @@ export default function Home() {
       <AnimatePresence>
         <motion.section
           className="bg-grey-1 py-[50px] px-[25px] md:px-[50px] text-[#161616] md:gap-[50px] md:grid md:grid-cols-2"
-          whileInView={{ opacity: "100%" }}
-          initial={{ opacity: "0%" }}
-          transition={{
-            duration: 0.5,
-            delay: 0.5,
-          }}
+          {...fadeIn}
         >
           <div>
             <h1 className="pb-[15px] lg:pt-[70px]">Alfapoint in short</h1>
