@@ -10,6 +10,7 @@ import { TechStack } from "@/components/tech-stack";
 import { PopupModal } from "react-calendly";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const swiper = useSwiper();
@@ -116,7 +117,7 @@ export default function Home() {
             ></Image>
           </button>
         </div>
-        <div className="max-md:hidden absolute bottom-[100px] left-[50px] pr-[50px] top-[20%] z-10 flex justify-between items-center gap-[50px]">
+        <div className="max-md:hidden absolute bottom-[100px] left-[50px] right-[50px] top-[20%] z-10 flex justify-around items-center gap-[50px]">
           <div className="max-w-[650px]">
             <h1 className="pb-[25px]">
               Cost-efficient solutions for tech companies worldwide
