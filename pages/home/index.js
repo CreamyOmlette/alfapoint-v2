@@ -158,10 +158,7 @@ export default function Home() {
           <Image width={113.65} height={50} alt="" src="/home/ksb.svg"></Image>
         </div>
       </section>
-      <section
-        className="bg-grey-1 py-[50px] px-[25px] md:px-[50px] text-[#161616] md:gap-[50px] md:grid md:grid-cols-2"
-        {...fadeIn}
-      >
+      <section className="bg-grey-1 py-[50px] px-[25px] md:px-[50px] text-[#161616] md:gap-[50px] md:grid md:grid-cols-2">
         <motion.div {...fadeIn}>
           <h1 className="pb-[15px] lg:pt-[70px]">Alfapoint in short</h1>
           <h4 className="pb-[24px]">
@@ -266,10 +263,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-      <section
-        className=" py-[50px] px-[25px] md:px-[50px] text-[#161616] md:gap-[50px] md:grid"
-        {...fadeIn}
-      >
+      <section className=" py-[50px] px-[25px] md:px-[50px] text-[#161616] md:gap-[50px] md:grid">
         <section className="py-[50px] px-[25px] md:px-[50px] text-black">
           <motion.h1
             {...consecutiveFadeIn}
