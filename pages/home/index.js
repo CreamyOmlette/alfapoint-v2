@@ -88,7 +88,7 @@ export default function Home() {
           open={isOpen}
         ></PopupModal>
       )}
-      <section className="h-[800px] sm:h-[100vh] relative">
+      <section className="min-h-[800px] h-[100vh] relative">
         <div className={`w-[100%] h-[100%] absolute z-0`}>
           <video
             autoPlay

@@ -150,112 +150,114 @@ export default function Navbar() {
         className={
           (scroll ? "p-[25px] " : "p-[25px] pt-[50px] ") +
           (burgerMenuActive ? "translate-x-[0vw] " : "translate-x-[100vw] ") +
-          "md:hidden fixed transition-all duration-300 ease-in-out w-[100vw] h-[100vh] bg-regal-blue z-[60] flex flex-col"
+          "md:hidden fixed transition-all duration-300 ease-in-out w-[100vw] h-[100vh] bg-regal-blue z-[60] overflow-scroll"
         }
       >
-        <div className="flex justify-between">
-          <Image width={129.17} height={30} alt="" src="/logo.svg" />
-          <Image
-            height={22}
-            width={25}
-            alt=""
-            src="/burger-menu.svg"
-            className="md:hidden h-[22px]"
-            onClick={() => setBurgerMenuActive(!burgerMenuActive)}
-          ></Image>
-        </div>
-        <ul className="flex flex-col justify-center flex-1">
-          <li className="py-[25px] border-t-[1px] border-white">
-            <Link
-              href="/home"
+        <div className=" flex flex-col min-h-[500px] h-[100%]">
+          <div className="flex justify-between">
+            <Image width={129.17} height={30} alt="" src="/logo.svg" />
+            <Image
+              height={22}
+              width={25}
+              alt=""
+              src="/burger-menu.svg"
+              className="md:hidden h-[22px]"
               onClick={() => setBurgerMenuActive(!burgerMenuActive)}
-            >
-              <h2>Home</h2>
-            </Link>
-          </li>
-          <li className="py-[25px] border-t-[1px] border-white">
-            <Link
-              href="/careers"
-              onClick={() => setBurgerMenuActive(!burgerMenuActive)}
-            >
-              <h2>Careers</h2>
-            </Link>
-          </li>
-          <li
-            className="py-[25px] border-t-[1px] border-b-[1px] border-white"
-            onClick={() => setActive(!active)}
-          >
-            <div>
-              <div className="flex justify-between">
-                <h2>Services</h2>
-                <Image
-                  height={11.58}
-                  width={14.76}
-                  alt=""
-                  src="/burger-menu-arrow.svg"
-                  className={
-                    (active ? "rotate-180" : "") +
-                    " transition-all duration-150 ease-in-out"
-                  }
-                ></Image>
-              </div>
-              <ul
-                className={
-                  (active
-                    ? "pt-[25px] max-h-[500px] "
-                    : "pt-[0px] max-h-[0px] ") +
-                  "leading-[18px] flex flex-col gap-[18px] overflow-hidden transition-all duration-300 ease-in-out"
-                }
+            ></Image>
+          </div>
+          <ul className="flex flex-col justify-center flex-1">
+            <li className="py-[25px] border-t-[1px] border-white">
+              <Link
+                href="/home"
+                onClick={() => setBurgerMenuActive(!burgerMenuActive)}
               >
-                <li>
-                  <Link
-                    href="/services/custom-software-development"
-                    onClick={() => setBurgerMenuActive(!burgerMenuActive)}
-                  >
-                    <h3>Custom software development</h3>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/dedicated-teams"
-                    onClick={() => setBurgerMenuActive(!burgerMenuActive)}
-                  >
-                    <h3>Dedicated teams</h3>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/ui-ux-design"
-                    onClick={() => setBurgerMenuActive(!burgerMenuActive)}
-                  >
-                    <h3>UI/UX Design</h3>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/data-science"
-                    onClick={() => setBurgerMenuActive(!burgerMenuActive)}
-                  >
-                    <h3>Data science</h3>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        <button
-          className="text-regal-blue leading-[40px] bg-white pl-[24px] pr-[24px] rounded"
-          onClick={() => setOpen(true)}
-        >
-          <h5 className="inline-block">Let’s work together</h5>
-          <Image
-            height={12}
-            width={15}
-            alt=""
-            src="/nav-arrow.svg"
-            className="inline-block ml-[6px] h-[11.58px]"
-          ></Image>
-        </button>
+                <h5>Home</h5>
+              </Link>
+            </li>
+            <li className="py-[25px] border-t-[1px] border-white">
+              <Link
+                href="/careers"
+                onClick={() => setBurgerMenuActive(!burgerMenuActive)}
+              >
+                <h5>Careers</h5>
+              </Link>
+            </li>
+            <li
+              className="py-[25px] border-t-[1px] border-b-[1px] border-white"
+              onClick={() => setActive(!active)}
+            >
+              <div>
+                <div className="flex justify-between">
+                  <h5>Services</h5>
+                  <Image
+                    height={11.58}
+                    width={14.76}
+                    alt=""
+                    src="/burger-menu-arrow.svg"
+                    className={
+                      (active ? "rotate-180" : "") +
+                      " transition-all duration-150 ease-in-out"
+                    }
+                  ></Image>
+                </div>
+                <ul
+                  className={
+                    (active
+                      ? "pt-[25px] max-h-[500px] "
+                      : "pt-[0px] max-h-[0px] ") +
+                    "leading-[18px] flex flex-col gap-[18px] overflow-hidden transition-all duration-300 ease-in-out"
+                  }
+                >
+                  <li>
+                    <Link
+                      href="/services/custom-software-development"
+                      onClick={() => setBurgerMenuActive(!burgerMenuActive)}
+                    >
+                      <h5>Custom software development</h5>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/dedicated-teams"
+                      onClick={() => setBurgerMenuActive(!burgerMenuActive)}
+                    >
+                      <h5>Dedicated teams</h5>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/ui-ux-design"
+                      onClick={() => setBurgerMenuActive(!burgerMenuActive)}
+                    >
+                      <h5>UI/UX Design</h5>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/data-science"
+                      onClick={() => setBurgerMenuActive(!burgerMenuActive)}
+                    >
+                      <h5>Data science</h5>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <button
+            className="text-regal-blue leading-[40px] bg-white pl-[24px] pr-[24px] rounded"
+            onClick={() => setOpen(true)}
+          >
+            <h5 className="inline-block">Let’s work together</h5>
+            <Image
+              height={12}
+              width={15}
+              alt=""
+              src="/nav-arrow.svg"
+              className="inline-block ml-[6px] h-[11.58px]"
+            ></Image>
+          </button>
+        </div>
       </div>
     </nav>
   );
