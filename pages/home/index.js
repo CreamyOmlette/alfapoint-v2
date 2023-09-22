@@ -11,7 +11,7 @@ import { PopupModal } from "react-calendly";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/data/animations";
+import { fadeIn, consecutiveFadeIn } from "@/data/animations";
 
 export default function Home() {
   const swiper = useSwiper();
@@ -158,11 +158,11 @@ export default function Home() {
           <Image width={113.65} height={50} alt="" src="/home/ksb.svg"></Image>
         </div>
       </section>
-      <motion.section
+      <section
         className="bg-grey-1 py-[50px] px-[25px] md:px-[50px] text-[#161616] md:gap-[50px] md:grid md:grid-cols-2"
         {...fadeIn}
       >
-        <div>
+        <motion.div {...fadeIn}>
           <h1 className="pb-[15px] lg:pt-[70px]">Alfapoint in short</h1>
           <h4 className="pb-[24px]">
             We are an international software development company that supports
@@ -201,10 +201,20 @@ export default function Home() {
               className="inline-block ml-[6px]"
             ></Image>
           </button>
-        </div>
+        </motion.div>
         <div>
-          <h1 className="pb-[30px] md:hidden">Our approach</h1>
-          <div className="py-[50px] px-[25px] bg-white mb-[25px]">
+          <motion.h1
+            className="pb-[30px] md:hidden"
+            {...consecutiveFadeIn}
+            custom={0}
+          >
+            Our approach
+          </motion.h1>
+          <motion.div
+            className="py-[50px] px-[25px] bg-white mb-[25px]"
+            {...consecutiveFadeIn}
+            custom={1}
+          >
             <Image
               height={55}
               width={55}
@@ -217,8 +227,12 @@ export default function Home() {
               Our processes are fully transparent and Client has access to all
               aspects of the product development at any stage.
             </p>
-          </div>
-          <div className="py-[50px] px-[25px] bg-white mb-[25px]">
+          </motion.div>
+          <motion.div
+            className="py-[50px] px-[25px] bg-white mb-[25px]"
+            {...consecutiveFadeIn}
+            custom={2}
+          >
             <Image
               height={55}
               width={55}
@@ -231,8 +245,12 @@ export default function Home() {
               Our company has a proven 90% Client retention rate after the first
               project.
             </p>
-          </div>
-          <div className="py-[50px] px-[25px] bg-white">
+          </motion.div>
+          <motion.div
+            className="py-[50px] px-[25px] bg-white"
+            {...consecutiveFadeIn}
+            custom={3}
+          >
             <Image
               height={55}
               width={55}
@@ -245,105 +263,117 @@ export default function Home() {
               We know that things change quickly so only several weeks of notice
               is necessary to cancel or change a Contract.
             </p>
-          </div>
+          </motion.div>
         </div>
-      </motion.section>
-      <motion.section
+      </section>
+      <section
         className=" py-[50px] px-[25px] md:px-[50px] text-[#161616] md:gap-[50px] md:grid"
         {...fadeIn}
       >
         <section className="py-[50px] px-[25px] md:px-[50px] text-black">
-          <h1 className="text-[#161616] pb-[50px] md:pb-[100px]">
+          <motion.h1
+            {...consecutiveFadeIn}
+            custom={0}
+            className="text-[#161616] pb-[50px] md:pb-[100px]"
+          >
             Services we offer
-          </h1>
+          </motion.h1>
           <div className="flex flex-col gap-[50px] lg:gap-[25px] md:grid md:grid-cols-2 md-grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
-            <Link href="/services/custom-software-development">
-              <div className="group relative cursor-pointer h-[100%]">
-                <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-                  <Image
-                    height={70}
-                    width={70}
-                    alt=""
-                    src="/home/custom-software.svg"
-                    className="pb-[25px]"
-                  ></Image>
-                  <h2 className="pb-[25px]">Custom Software development</h2>
-                  <p>
-                    We work with startups, SMEs & world leading enterprises to
-                    build customized software solutions
-                  </p>
+            <motion.div {...consecutiveFadeIn} custom={1}>
+              <Link href="/services/custom-software-development">
+                <div className="group relative cursor-pointer h-[100%]">
+                  <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                    <Image
+                      height={70}
+                      width={70}
+                      alt=""
+                      src="/home/custom-software.svg"
+                      className="pb-[25px]"
+                    ></Image>
+                    <h2 className="pb-[25px]">Custom Software development</h2>
+                    <p>
+                      We work with startups, SMEs & world leading enterprises to
+                      build customized software solutions
+                    </p>
+                  </div>
+                  <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                    EXPLORE
+                  </h6>
                 </div>
-                <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-                  EXPLORE
-                </h6>
-              </div>
-            </Link>
-            <Link href="/services/dedicated-teams">
-              <div className="group relative cursor-pointer h-[100%]">
-                <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-                  <Image
-                    height={70}
-                    width={70}
-                    alt=""
-                    src="/home/dedicated-teams.svg"
-                    className="pb-[25px]"
-                  ></Image>
-                  <h2 className="pb-[25px]">Dedicated teams</h2>
-                  <p>
-                    We grow your team using our development resources and
-                    recruiting capabilities
-                  </p>
+              </Link>
+            </motion.div>
+            <motion.div {...consecutiveFadeIn} custom={2}>
+              <Link href="/services/dedicated-teams">
+                <div className="group relative cursor-pointer h-[100%]">
+                  <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                    <Image
+                      height={70}
+                      width={70}
+                      alt=""
+                      src="/home/dedicated-teams.svg"
+                      className="pb-[25px]"
+                    ></Image>
+                    <h2 className="pb-[25px]">Dedicated teams</h2>
+                    <p>
+                      We grow your team using our development resources and
+                      recruiting capabilities
+                    </p>
+                  </div>
+                  <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                    EXPLORE
+                  </h6>
                 </div>
-                <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-                  EXPLORE
-                </h6>
-              </div>
-            </Link>
-            <Link href="/services/ui-ux-design">
-              <div className="group relative cursor-pointer h-[100%]">
-                <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-                  <Image
-                    height={70}
-                    width={70}
-                    alt=""
-                    src="/home/ui:ux.svg"
-                    className="pb-[25px]"
-                  ></Image>
-                  <h2 className="pb-[25px]">UI/UX Design</h2>
-                  <p>
-                    Our team of experienced product designers & developers help
-                    you build successful digital products
-                  </p>
+              </Link>
+            </motion.div>
+            <motion.div {...consecutiveFadeIn} custom={3}>
+              <Link href="/services/ui-ux-design">
+                <div className="group relative cursor-pointer h-[100%]">
+                  <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                    <Image
+                      height={70}
+                      width={70}
+                      alt=""
+                      src="/home/ui:ux.svg"
+                      className="pb-[25px]"
+                    ></Image>
+                    <h2 className="pb-[25px]">UI/UX Design</h2>
+                    <p>
+                      Our team of experienced product designers & developers
+                      help you build successful digital products
+                    </p>
+                  </div>
+                  <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                    EXPLORE
+                  </h6>
                 </div>
-                <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-                  EXPLORE
-                </h6>
-              </div>
-            </Link>
-            <Link href="/services/data-science">
-              <div className="group relative cursor-pointer h-[100%]">
-                <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-                  <Image
-                    height={70}
-                    width={70}
-                    alt=""
-                    src="/home/data-science.svg"
-                    className="pb-[25px]"
-                  ></Image>
-                  <h2 className="pb-[25px]">Data science</h2>
-                  <p>
-                    We help organizations adopt data driven insights and
-                    automated reporting for faster decision making
-                  </p>
+              </Link>
+            </motion.div>
+            <motion.div {...consecutiveFadeIn} custom={4}>
+              <Link href="/services/data-science">
+                <div className="group relative cursor-pointer h-[100%]">
+                  <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                    <Image
+                      height={70}
+                      width={70}
+                      alt=""
+                      src="/home/data-science.svg"
+                      className="pb-[25px]"
+                    ></Image>
+                    <h2 className="pb-[25px]">Data science</h2>
+                    <p>
+                      We help organizations adopt data driven insights and
+                      automated reporting for faster decision making
+                    </p>
+                  </div>
+                  <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                    EXPLORE
+                  </h6>
                 </div>
-                <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-                  EXPLORE
-                </h6>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
           </div>
         </section>
-      </motion.section>
+      </section>
       <motion.section className="md:grid" {...fadeIn}>
         <section className="py-[50px] px-[25px] md:px-[50px] bg-regal-blue">
           <h1 className="pb-[50px]">How do we work?</h1>
@@ -478,11 +508,13 @@ export default function Home() {
           </Swiper>
         </section>
       </motion.section>
-      <motion.section className="md:grid" {...fadeIn}>
+      <section className="md:grid">
         <section className="py-[50px] px-[25px] text-[#161616] md:px-[50px]">
-          <h1 className="pb-[50px]">Benefits of working with us</h1>
+          <motion.h1 className="pb-[50px]" {...consecutiveFadeIn} custom={0}>
+            Benefits of working with us
+          </motion.h1>
           <div className="flex flex-col gap-[25px] min-[600px]:grid min-[600px]:grid-cols-2 min-[600px]:grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
-            <div>
+            <motion.div {...consecutiveFadeIn} custom={1}>
               <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/collab.svg')] bg-no-repeat bg-center mb-[15px]"></div>
               <h2 className="pb-[15px]">Direct collaboration</h2>
               <p>
@@ -491,8 +523,8 @@ export default function Home() {
                 developers and other exceptional personnel that will report
                 directly to you and work alongside your base team.
               </p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div {...consecutiveFadeIn} custom={2}>
               <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/reporting.svg')] bg-no-repeat bg-center mb-[15px]"></div>
               <h2 className="pb-[15px]">Transparent reporting</h2>
               <p>
@@ -500,8 +532,8 @@ export default function Home() {
                 reports, screenshots, and videos related to your project’s
                 milestones from our team straight to yours.
               </p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div {...consecutiveFadeIn} custom={3}>
               <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/best.svg')] bg-no-repeat bg-center mb-[15px]"></div>
               <h2 className="pb-[15px]">Only the best</h2>
               <p>
@@ -509,8 +541,8 @@ export default function Home() {
                 process. Our partners and clients have access to the top 2% of
                 talent that passes our in-depth application process.
               </p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div {...consecutiveFadeIn} custom={4}>
               <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/solutions.svg')] bg-no-repeat bg-center mb-[15px]"></div>
               <h2 className="pb-[15px]">Customer-tailored solutions</h2>
               <p>
@@ -518,10 +550,10 @@ export default function Home() {
                 original team’s extension. Our priority when designing and
                 implementing the business processes is transparency.
               </p>
-            </div>
+            </motion.div>
           </div>
         </section>
-      </motion.section>
+      </section>
       <IconSlider></IconSlider>
       <section className="py-[50px] md:pb-0 px-[25px] md:px-[25px] lg:px-[50] md:mx-[50px] bg-regal-blue md:grid md:grid-cols-6 md:gap-[50px] md:pt-[100px]">
         <TechStack></TechStack>
