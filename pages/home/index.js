@@ -159,10 +159,9 @@ export default function Home() {
           <Image width={113.65} height={50} alt="" src="/home/ksb.svg"></Image>
         </div>
       </section>
-      <AnimatePresence>
         <motion.section
-          className="bg-grey-1 py-[50px] px-[25px] md:px-[50px] text-[#161616] md:gap-[50px] md:grid md:grid-cols-2"
-          {...fadeIn}
+        className="bg-grey-1 py-[50px] px-[25px] md:px-[50px] text-[#161616] md:gap-[50px] md:grid md:grid-cols-2"
+        {...fadeIn}
         >
           <div>
             <h1 className="pb-[15px] lg:pt-[70px]">Alfapoint in short</h1>
@@ -250,217 +249,209 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </motion.section>
-      </AnimatePresence>
-      <section className="py-[50px] px-[25px] md:px-[50px] text-black">
-        <h1 className="text-[#161616] pb-[50px] md:pb-[100px]">
-          Services we offer
-        </h1>
-        <div className="flex flex-col gap-[50px] lg:gap-[25px] md:grid md:grid-cols-2 md-grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
-          <Link href="/services/custom-software-development">
-            <div className="group relative cursor-pointer h-[100%]">
-              <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-                <Image
-                  height={70}
-                  width={70}
-                  alt=""
-                  src="/home/custom-software.svg"
-                  className="pb-[25px]"
-                ></Image>
-                <h2 className="pb-[25px]">Custom Software development</h2>
-                <p>
-                  We work with startups, SMEs & world leading enterprises to
-                  build customized software solutions
-                </p>
+          </motion.section>
+          <motion.section
+          className=" py-[50px] px-[25px] md:px-[50px] text-[#161616] md:gap-[50px] md:grid"
+          {...fadeIn}>
+            <section className="py-[50px] px-[25px] md:px-[50px] text-black">
+              <h1 className="text-[#161616] pb-[50px] md:pb-[100px]">
+                Services we offer
+              </h1>
+              <div className="flex flex-col gap-[50px] lg:gap-[25px] md:grid md:grid-cols-2 md-grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
+                <Link href="/services/custom-software-development">
+                  <div className="group relative cursor-pointer h-[100%]">
+                    <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                      <Image
+                        height={70}
+                        width={70}
+                        alt=""
+                        src="/home/custom-software.svg"
+                        className="pb-[25px]"
+                      ></Image>
+                      <h2 className="pb-[25px]">Custom Software development</h2>
+                      <p>
+                        We work with startups, SMEs & world leading enterprises to
+                        build customized software solutions
+                      </p>
+                    </div>
+                    <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                      EXPLORE
+                    </h6>
+                  </div>
+                </Link>
+                <Link href="/services/dedicated-teams">
+                  <div className="group relative cursor-pointer h-[100%]">
+                    <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                      <Image
+                        height={70}
+                        width={70}
+                        alt=""
+                        src="/home/dedicated-teams.svg"
+                        className="pb-[25px]"
+                      ></Image>
+                      <h2 className="pb-[25px]">Dedicated teams</h2>
+                      <p>
+                        We grow your team using our development resources and
+                        recruiting capabilities
+                      </p>
+                    </div>
+                    <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                      EXPLORE
+                    </h6>
+                  </div>
+                </Link>
+                <Link href="/services/ui-ux-design">
+                  <div className="group relative cursor-pointer h-[100%]">
+                    <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                      <Image
+                        height={70}
+                        width={70}
+                        alt=""
+                        src="/home/ui:ux.svg"
+                        className="pb-[25px]"
+                      ></Image>
+                      <h2 className="pb-[25px]">UI/UX Design</h2>
+                      <p>
+                        Our team of experienced product designers & developers help
+                        you build successful digital products
+                      </p>
+                    </div>
+                    <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                      EXPLORE
+                    </h6>
+                  </div>
+                </Link>
+                <Link href="/services/data-science">
+                  <div className="group relative cursor-pointer h-[100%]">
+                    <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                      <Image
+                        height={70}
+                        width={70}
+                        alt=""
+                        src="/home/data-science.svg"
+                        className="pb-[25px]"
+                      ></Image>
+                      <h2 className="pb-[25px]">Data science</h2>
+                      <p>
+                        We help organizations adopt data driven insights and automated
+                        reporting for faster decision making
+                      </p>
+                    </div>
+                    <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                      EXPLORE
+                    </h6>
+                  </div>
+                </Link>
               </div>
-              <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-                EXPLORE
-              </h6>
-            </div>
-          </Link>
-          <Link href="/services/dedicated-teams">
-            <div className="group relative cursor-pointer h-[100%]">
-              <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-                <Image
-                  height={70}
-                  width={70}
-                  alt=""
-                  src="/home/dedicated-teams.svg"
-                  className="pb-[25px]"
-                ></Image>
-                <h2 className="pb-[25px]">Dedicated teams</h2>
-                <p>
-                  We grow your team using our development resources and
-                  recruiting capabilities
-                </p>
-              </div>
-              <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-                EXPLORE
-              </h6>
-            </div>
-          </Link>
-          <Link href="/services/ui-ux-design">
-            <div className="group relative cursor-pointer h-[100%]">
-              <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-                <Image
-                  height={70}
-                  width={70}
-                  alt=""
-                  src="/home/ui:ux.svg"
-                  className="pb-[25px]"
-                ></Image>
-                <h2 className="pb-[25px]">UI/UX Design</h2>
-                <p>
-                  Our team of experienced product designers & developers help
-                  you build successful digital products
-                </p>
-              </div>
-              <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-                EXPLORE
-              </h6>
-            </div>
-          </Link>
-          <Link href="/services/data-science">
-            <div className="group relative cursor-pointer h-[100%]">
-              <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-                <Image
-                  height={70}
-                  width={70}
-                  alt=""
-                  src="/home/data-science.svg"
-                  className="pb-[25px]"
-                ></Image>
-                <h2 className="pb-[25px]">Data science</h2>
-                <p>
-                  We help organizations adopt data driven insights and automated
-                  reporting for faster decision making
-                </p>
-              </div>
-              <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-                EXPLORE
-              </h6>
-            </div>
-          </Link>
-        </div>
-      </section>
-      <section className="py-[50px] px-[25px] md:px-[50px] bg-regal-blue">
-        <h1 className="pb-[50px]">How do we work?</h1>
-        <div className="text-black flex flex-col gap-[25px] md:grid md:grid-cols-2 md:grid-rows-1">
-          <div className="p-[25px] md:p-[50px] lg:pr-[175px] bg-white">
-            <Image
-              height={100}
-              width={100}
-              alt=""
-              src="/home/dedicated-teams-model.svg"
-              className="pb-[25px]"
-            ></Image>
-            <h2 className="pb-[25px]">Dedicated teams model</h2>
-            <p>
-              Whether you’re a fast-growing startup or multinational enterprise,
-              our dedicated engineering teams are hand-picked to help you start
-              and scale product development quickly.
-            </p>
-          </div>
-          <div className="p-[25px] md:p-[50px] lg:pr-[175px] bg-white">
-            <Image
-              height={100}
-              width={100}
-              alt=""
-              src="/home/project-based-engagement.svg"
-              className="pb-[25px]"
-            ></Image>
-            <h2 className="pb-[25px]">Project-based engagement</h2>
-            <p>
-              Our team takes care of everything, leaving you to focus on your
-              company’s growth. Not only can we develop your project from
-              scratch, but we excel at business analysis, technical
-              documentation, prototyping, design, software development, and
-              quality assurance — all while optimizing the cost, timeframe, and
-              scope of the work
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className="py-[50px] px-[25px] md:px-[50px] bg-grey-2">
-        <h1 className="pb-[25px] text-[#161616]">Meet our people</h1>
-        <p className="pb-[25px] text-black">
-          We build extremely close relationships within our team, in order to
-          create a true sense of caring, family and teamwork between many
-          different groups and nationalities.
-        </p>
-        <p className="text-black pb-[50px]">
-          When we recruit talent, we’re looking for curious, intelligent,
-          problem-solvers. By adding thoughtful, original ideas, our engineers
-          and designers take pride in their creations and naturally produce
-          their best work.
-        </p>
-        <Swiper
-          spaceBetween={0}
-          slidesPerView={1}
-          className="relative"
-          breakpoints={{
-            690: {
-              slidesPerView: 2,
-            },
-            900: {
-              slidesPerView: 3,
-            },
-          }}
-        >
-          <SliderButtons
-            next="right-[25px] top-[255px]"
-            prev="left-[25px] top-[255px]"
-            hoverColor="group-hover:bg-regal-blue"
-            borderHoverColor="hover:border-white"
-            bgHoverColor="hover:bg-white"
-          ></SliderButtons>
-          <SwiperSlide>
-            <div className="h-[560px] bg-[url('/home/vlad.png')] bg-no-repeat relative bg-cover">
-              <div className="absolute left-[25px] bottom-[25px]">
-                <h2>Vladislav Matvei</h2>
-                <small>CTO</small>
-              </div>
-              <a
-                className="absolute right-[25px] bottom-[25px] cursor-pointer"
-                href="https://www.linkedin.com/in/vlad-matvei-2b782997/"
-              >
-                <Image
-                  height={50}
-                  width={50}
-                  alt=""
-                  src="/home/linkedin-link.svg"
-                ></Image>
-              </a>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[560px] bg-[url('/home/dima.png')] bg-no-repeat relative bg-cover">
-              <div className="absolute left-[25px] bottom-[25px]">
-                <h2>Dumitru Lipceanu</h2>
-                <small>CEO</small>
-              </div>
-            </div>
-            <a
-              className="absolute right-[25px] bottom-[25px] cursor-pointer"
-              href="https://www.linkedin.com/in/dumitru-lipceanu-9706b693/"
-            >
+            </section>
+      </motion.section>
+      <motion.section
+      className="md:grid"
+      {...fadeIn}>
+        <section className="py-[50px] px-[25px] md:px-[50px] bg-regal-blue">
+          <h1 className="pb-[50px]">How do we work?</h1>
+          <div className="text-black flex flex-col gap-[25px] md:grid md:grid-cols-2 md:grid-rows-1">
+            <div className="p-[25px] md:p-[50px] lg:pr-[175px] bg-white">
               <Image
-                height={50}
-                width={50}
+                height={100}
+                width={100}
                 alt=""
-                src="/home/linkedin-link.svg"
+                src="/home/dedicated-teams-model.svg"
+                className="pb-[25px]"
               ></Image>
-            </a>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="h-[560px] bg-[url('/home/vitya.jpg')] bg-no-repeat relative bg-cover">
-              <div className="absolute left-[25px] bottom-[25px]">
-                <h2>Victor Uncuta</h2>
-                <small>Head of BD</small>
+              <h2 className="pb-[25px]">Dedicated teams model</h2>
+              <p>
+                Whether you’re a fast-growing startup or multinational enterprise,
+                our dedicated engineering teams are hand-picked to help you start
+                and scale product development quickly.
+              </p>
+            </div>
+            <div className="p-[25px] md:p-[50px] lg:pr-[175px] bg-white">
+              <Image
+                height={100}
+                width={100}
+                alt=""
+                src="/home/project-based-engagement.svg"
+                className="pb-[25px]"
+              ></Image>
+              <h2 className="pb-[25px]">Project-based engagement</h2>
+              <p>
+                Our team takes care of everything, leaving you to focus on your
+                company’s growth. Not only can we develop your project from
+                scratch, but we excel at business analysis, technical
+                documentation, prototyping, design, software development, and
+                quality assurance — all while optimizing the cost, timeframe, and
+                scope of the work
+              </p>
+            </div>
+          </div>
+        </section>
+      </motion.section>
+      <motion.section
+      className="md:grid"
+      {...fadeIn}>
+        <section className="py-[50px] px-[25px] md:px-[50px] bg-grey-2">
+          <h1 className="pb-[25px] text-[#161616]">Meet our people</h1>
+          <p className="pb-[25px] text-black">
+            We build extremely close relationships within our team, in order to
+            create a true sense of caring, family and teamwork between many
+            different groups and nationalities.
+          </p>
+          <p className="text-black pb-[50px]">
+            When we recruit talent, we’re looking for curious, intelligent,
+            problem-solvers. By adding thoughtful, original ideas, our engineers
+            and designers take pride in their creations and naturally produce
+            their best work.
+          </p>
+          <Swiper
+            spaceBetween={0}
+            slidesPerView={1}
+            className="relative"
+            breakpoints={{
+              690: {
+                slidesPerView: 2,
+              },
+              900: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            <SliderButtons
+              next="right-[25px] top-[255px]"
+              prev="left-[25px] top-[255px]"
+              hoverColor="group-hover:bg-regal-blue"
+              borderHoverColor="hover:border-white"
+              bgHoverColor="hover:bg-white"
+            ></SliderButtons>
+            <SwiperSlide>
+              <div className="h-[560px] bg-[url('/home/vlad.png')] bg-no-repeat relative bg-cover">
+                <div className="absolute left-[25px] bottom-[25px]">
+                  <h2>Vladislav Matvei</h2>
+                  <small>CTO</small>
+                </div>
+                <a
+                  className="absolute right-[25px] bottom-[25px] cursor-pointer"
+                  href="https://www.linkedin.com/in/vlad-matvei-2b782997/"
+                >
+                  <Image
+                    height={50}
+                    width={50}
+                    alt=""
+                    src="/home/linkedin-link.svg"
+                  ></Image>
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="h-[560px] bg-[url('/home/dima.png')] bg-no-repeat relative bg-cover">
+                <div className="absolute left-[25px] bottom-[25px]">
+                  <h2>Dumitru Lipceanu</h2>
+                  <small>CEO</small>
+                </div>
               </div>
               <a
                 className="absolute right-[25px] bottom-[25px] cursor-pointer"
-                href="https://www.linkedin.com/in/victoruncuta/"
+                href="https://www.linkedin.com/in/dumitru-lipceanu-9706b693/"
               >
                 <Image
                   height={50}
@@ -469,52 +460,75 @@ export default function Home() {
                   src="/home/linkedin-link.svg"
                 ></Image>
               </a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="h-[560px] bg-[url('/home/vitya.jpg')] bg-no-repeat relative bg-cover">
+                <div className="absolute left-[25px] bottom-[25px]">
+                  <h2>Victor Uncuta</h2>
+                  <small>Head of BD</small>
+                </div>
+                <a
+                  className="absolute right-[25px] bottom-[25px] cursor-pointer"
+                  href="https://www.linkedin.com/in/victoruncuta/"
+                >
+                  <Image
+                    height={50}
+                    width={50}
+                    alt=""
+                    src="/home/linkedin-link.svg"
+                  ></Image>
+                </a>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </section>
+      </motion.section>
+      <motion.section
+      className="md:grid"
+      {...fadeIn}>
+        <section className="py-[50px] px-[25px] text-[#161616] md:px-[50px]">
+          <h1 className="pb-[50px]">Benefits of working with us</h1>
+          <div className="flex flex-col gap-[25px] min-[600px]:grid min-[600px]:grid-cols-2 min-[600px]:grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
+            <div>
+              <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/collab.svg')] bg-no-repeat bg-center mb-[15px]"></div>
+              <h2 className="pb-[15px]">Direct collaboration</h2>
+              <p>
+                Build your own development team in partnership with us, with
+                access to our pool of solution architects, senior software
+                developers and other exceptional personnel that will report
+                directly to you and work alongside your base team.
+              </p>
             </div>
-          </SwiperSlide>
-        </Swiper>
-      </section>
-      <section className="py-[50px] px-[25px] text-[#161616] md:px-[50px]">
-        <h1 className="pb-[50px]">Benefits of working with us</h1>
-        <div className="flex flex-col gap-[25px] min-[600px]:grid min-[600px]:grid-cols-2 min-[600px]:grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
-          <div>
-            <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/collab.svg')] bg-no-repeat bg-center mb-[15px]"></div>
-            <h2 className="pb-[15px]">Direct collaboration</h2>
-            <p>
-              Build your own development team in partnership with us, with
-              access to our pool of solution architects, senior software
-              developers and other exceptional personnel that will report
-              directly to you and work alongside your base team.
-            </p>
+            <div>
+              <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/reporting.svg')] bg-no-repeat bg-center mb-[15px]"></div>
+              <h2 className="pb-[15px]">Transparent reporting</h2>
+              <p>
+                Keep your expectations managed with regular, clear progress
+                reports, screenshots, and videos related to your project’s
+                milestones from our team straight to yours.
+              </p>
+            </div>
+            <div>
+              <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/best.svg')] bg-no-repeat bg-center mb-[15px]"></div>
+              <h2 className="pb-[15px]">Only the best</h2>
+              <p>
+                We are a tech-oriented company with a rigorous selection process.
+                Our partners and clients have access to the top 2% of talent that
+                passes our in-depth application process.
+              </p>
+            </div>
+            <div>
+              <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/solutions.svg')] bg-no-repeat bg-center mb-[15px]"></div>
+              <h2 className="pb-[15px]">Customer-tailored solutions</h2>
+              <p>
+                Our team is well trained in working remotely, especially as an
+                original team’s extension. Our priority when designing and
+                implementing the business processes is transparency.
+              </p>
+            </div>
           </div>
-          <div>
-            <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/reporting.svg')] bg-no-repeat bg-center mb-[15px]"></div>
-            <h2 className="pb-[15px]">Transparent reporting</h2>
-            <p>
-              Keep your expectations managed with regular, clear progress
-              reports, screenshots, and videos related to your project’s
-              milestones from our team straight to yours.
-            </p>
-          </div>
-          <div>
-            <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/best.svg')] bg-no-repeat bg-center mb-[15px]"></div>
-            <h2 className="pb-[15px]">Only the best</h2>
-            <p>
-              We are a tech-oriented company with a rigorous selection process.
-              Our partners and clients have access to the top 2% of talent that
-              passes our in-depth application process.
-            </p>
-          </div>
-          <div>
-            <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/solutions.svg')] bg-no-repeat bg-center mb-[15px]"></div>
-            <h2 className="pb-[15px]">Customer-tailored solutions</h2>
-            <p>
-              Our team is well trained in working remotely, especially as an
-              original team’s extension. Our priority when designing and
-              implementing the business processes is transparency.
-            </p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </motion.section>  
       <IconSlider></IconSlider>
       <section className="py-[50px] md:pb-0 px-[25px] md:px-[25px] lg:px-[50] md:mx-[50px] bg-regal-blue md:grid md:grid-cols-6 md:gap-[50px] md:pt-[100px]">
         <TechStack></TechStack>
