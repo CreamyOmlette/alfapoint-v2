@@ -94,15 +94,18 @@ export default function DedicatedTeams() {
               When would you go for a dedicated team?
             </h2>
             <ul className="flex flex-col gap-[15px] leading-[39px] pb-[50px]">
-              <li className="pl-[50px] bg-[url('/services/🚀.svg')] bg-no-repeat bg-left bg-center">
-                Long-term projects or SaaS products
+              <li className="pl-[50px] bg-[url('/services/💎.svg')] bg-no-repeat bg-left bg-center">
+                Reducing time and financial expenses by up to 25% on recruitment
+                and staff maintenance.
               </li>
               <li className="pl-[50px] bg-[url('/services/🔥.svg')] bg-no-repeat bg-left bg-center">
-                A diverse suite of skills is required
+                Access to top-notch resources worldwide.
               </li>
               <li className="pl-[50px] bg-[url('/services/✨.svg')] bg-no-repeat bg-left bg-center">
-                Highly specialized expertise needed, however hiring locally
-                requires too much time and expense.
+                Immediate access to experts, saving months of in-house search.
+              </li>
+              <li className="pl-[50px] bg-[url('/services/🚀.svg')] bg-no-repeat bg-left bg-center">
+                Quickly expand teams at any project phase.
               </li>
             </ul>
             <div className="relative">
