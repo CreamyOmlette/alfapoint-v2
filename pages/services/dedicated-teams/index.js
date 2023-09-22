@@ -324,7 +324,7 @@ export default function DedicatedTeams() {
         </Swiper>
       </section>
       <IconSlider></IconSlider>
-      <section className="py-[50px] px-[25px] lg:px-[50] text-black bg-grey-3">
+      <section className="py-[50px] px-[25px] lg:px-[50px] text-black bg-grey-3">
         <h1 className="pb-[100px]">What is the process?</h1>
         <div className="flex flex-col items-center gap-[25px] md:flex-row md:gap-[12.5px] justify-between">
           <div>
