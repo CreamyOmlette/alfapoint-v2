@@ -10,6 +10,7 @@ import { TechStack } from "@/components/tech-stack";
 import { PopupModal } from "react-calendly";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
@@ -89,7 +90,7 @@ export default function Home() {
       )}
       <section className="h-[100vh] relative">
         <div className={`w-[100%] h-[100%] absolute z-0`}>
-          <video autoPlay muted loop className="w-[100%] h-[100%] object-cover">
+          <video autoPlay muted loop playsInline className="w-[100%] h-[100%] object-cover">
             <source src="/home/home.mp4" type="video/mp4" />
           </video>
         </div>
@@ -151,93 +152,104 @@ export default function Home() {
           <Image width={113.65} height={50} alt="" src="/home/ksb.svg"></Image>
         </div>
       </section>
-      <section className="bg-grey-1 py-[50px] px-[25px] md:px-[50px] text-[#161616] md:gap-[50px] md:grid md:grid-cols-2">
-        <div>
-          <h1 className="pb-[15px] lg:pt-[70px]">Alfapoint in short</h1>
-          <h4 className="pb-[24px]">
-            We are an international software development company that supports
-            all types of organizations in digital and technical transformation.
-          </h4>
-          <h4 className="pb-[50px]">
-            Since 2016, we have been working with businesses looking to turn
-            their ideas into next-gen digital products. As custom software
-            advocates, we deliver intuitive, scalable, and cost-effective
-            solutions to startups and big companies alike.
-          </h4>
-          <div className="flex text-center gap-[20px] md:gap-[50px] pb-[50px]">
-            <div>
-              <h1 className="text-[42px]">50+</h1>
-              <h5>software experts</h5>
+      <AnimatePresence>
+        <motion.section
+          className="bg-grey-1 py-[50px] px-[25px] md:px-[50px] text-[#161616] md:gap-[50px] md:grid md:grid-cols-2"
+          whileInView={{ opacity: "100%" }}
+          initial={{ opacity: "0%" }}
+          transition={{
+            duration: 0.5,
+            delay: 0.5,
+          }}
+        >
+          <div>
+            <h1 className="pb-[15px] lg:pt-[70px]">Alfapoint in short</h1>
+            <h4 className="pb-[24px]">
+              We are an international software development company that supports
+              all types of organizations in digital and technical
+              transformation.
+            </h4>
+            <h4 className="pb-[50px]">
+              Since 2016, we have been working with businesses looking to turn
+              their ideas into next-gen digital products. As custom software
+              advocates, we deliver intuitive, scalable, and cost-effective
+              solutions to startups and big companies alike.
+            </h4>
+            <div className="flex text-center gap-[20px] md:gap-[50px] pb-[50px]">
+              <div>
+                <h1 className="text-[42px]">50+</h1>
+                <h5>software experts</h5>
+              </div>
+              <div>
+                <h1 className="text-[42px]">7</h1>
+                <h5>years on the market</h5>
+              </div>
+              <div>
+                <h1 className="text-[42px]">30+</h1>
+                <h5>projects delivered</h5>
+              </div>
             </div>
-            <div>
-              <h1 className="text-[42px]">7</h1>
-              <h5>years on the market</h5>
+            <button
+              className="text-white rounded bg-regal-blue pl-[25px] pr-[25px] leading-[40px] mb-[50px]"
+              onClick={() => setOpen(true)}
+            >
+              <h5 className="inline-block">GET IN TOUCH</h5>
+              <Image
+                height={12}
+                width={15}
+                alt=""
+                src="/button-arrow-white.svg"
+                className="inline-block ml-[6px]"
+              ></Image>
+            </button>
+          </div>
+          <div>
+            <h1 className="pb-[30px] md:hidden">Our approach</h1>
+            <div className="py-[50px] px-[25px] bg-white mb-[25px]">
+              <Image
+                height={55}
+                width={55}
+                alt=""
+                src="/home/transparency.svg"
+                className="pb-[25px]"
+              ></Image>
+              <h2 className="pb-[10px]">Transparency in processes</h2>
+              <p>
+                Our processes are fully transparent and Client has access to all
+                aspects of the product development at any stage.
+              </p>
             </div>
-            <div>
-              <h1 className="text-[42px]">30+</h1>
-              <h5>projects delivered</h5>
+            <div className="py-[50px] px-[25px] bg-white mb-[25px]">
+              <Image
+                height={55}
+                width={55}
+                alt=""
+                src="/home/customer-satisfaction.svg"
+                className="pb-[25px]"
+              ></Image>
+              <h2 className="pb-[10px]">Customer satisfaction</h2>
+              <p>
+                Our company has a proven 90% Client retention rate after the
+                first project.
+              </p>
+            </div>
+            <div className="py-[50px] px-[25px] bg-white">
+              <Image
+                height={55}
+                width={55}
+                alt=""
+                src="/home/flexibility.svg"
+                className="pb-[25px]"
+              ></Image>
+              <h2 className="pb-[10px]">Flexibility</h2>
+              <p>
+                We know that things change quickly so only several weeks of
+                notice is necessary to cancel or change a Contract.
+              </p>
             </div>
           </div>
-          <button
-            className="text-white rounded bg-regal-blue pl-[25px] pr-[25px] leading-[40px] mb-[50px]"
-            onClick={() => setOpen(true)}
-          >
-            <h5 className="inline-block">GET IN TOUCH</h5>
-            <Image
-              height={12}
-              width={15}
-              alt=""
-              src="/button-arrow-white.svg"
-              className="inline-block ml-[6px]"
-            ></Image>
-          </button>
-        </div>
-        <div>
-          <h1 className="pb-[30px] md:hidden">Our approach</h1>
-          <div className="py-[50px] px-[25px] bg-white mb-[25px]">
-            <Image
-              height={55}
-              width={55}
-              alt=""
-              src="/home/transparency.svg"
-              className="pb-[25px]"
-            ></Image>
-            <h2 className="pb-[10px]">Transparency in processes</h2>
-            <p>
-              Our processes are fully transparent and Client has access to all
-              aspects of the product development at any stage.
-            </p>
-          </div>
-          <div className="py-[50px] px-[25px] bg-white mb-[25px]">
-            <Image
-              height={55}
-              width={55}
-              alt=""
-              src="/home/customer-satisfaction.svg"
-              className="pb-[25px]"
-            ></Image>
-            <h2 className="pb-[10px]">Customer satisfaction</h2>
-            <p>
-              Our company has a proven 90% Client retention rate after the first
-              project.
-            </p>
-          </div>
-          <div className="py-[50px] px-[25px] bg-white">
-            <Image
-              height={55}
-              width={55}
-              alt=""
-              src="/home/flexibility.svg"
-              className="pb-[25px]"
-            ></Image>
-            <h2 className="pb-[10px]">Flexibility</h2>
-            <p>
-              We know that things change quickly so only several weeks of notice
-              is necessary to cancel or change a Contract.
-            </p>
-          </div>
-        </div>
-      </section>
+        </motion.section>
+      </AnimatePresence>
       <section className="py-[50px] px-[25px] md:px-[50px] text-black">
         <h1 className="text-[#161616] pb-[50px] md:pb-[100px]">
           Services we offer

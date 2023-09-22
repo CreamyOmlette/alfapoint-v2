@@ -117,7 +117,7 @@ export default function DedicatedTeams() {
           <div className="h-[130px] bg-regal-blue"></div>
           <div className="sticky top-0 overflow-hidden">
             <div className="relative">
-              <video autoPlay muted loop className="h-[100vh] object-cover">
+              <video autoPlay muted loop playsInline className="h-[100vh] object-cover">
                 <source src="/services/videos/0.mp4" type="video/mp4" />
               </video>
               <div className="absolute top-0 h-full w-full z-10 video-overlay"></div>
