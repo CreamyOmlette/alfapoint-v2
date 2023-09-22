@@ -11,7 +11,6 @@ import { PopupModal } from "react-calendly";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { AnimatePresence } from "framer-motion";
 import { fadeIn } from "@/data/animations";
 
 export default function Home() {
@@ -89,7 +88,7 @@ export default function Home() {
           open={isOpen}
         ></PopupModal>
       )}
-      <section className="min-h-[650px] h-[100vh] relative">
+      <section className="max-[260px]:min-h-[1000px] max-[300px]:min-h-[800px] max-[390px]:min-h-[700px] h-[100vh] relative">
         <div className={`w-[100%] h-[100%] absolute z-0`}>
           <video
             autoPlay
@@ -159,195 +158,193 @@ export default function Home() {
           <Image width={113.65} height={50} alt="" src="/home/ksb.svg"></Image>
         </div>
       </section>
-        <motion.section
+      <motion.section
         className="bg-grey-1 py-[50px] px-[25px] md:px-[50px] text-[#161616] md:gap-[50px] md:grid md:grid-cols-2"
         {...fadeIn}
-        >
-          <div>
-            <h1 className="pb-[15px] lg:pt-[70px]">Alfapoint in short</h1>
-            <h4 className="pb-[24px]">
-              We are an international software development company that supports
-              all types of organizations in digital and technical
-              transformation.
-            </h4>
-            <h4 className="pb-[50px]">
-              Since 2016, we have been working with businesses looking to turn
-              their ideas into next-gen digital products. As custom software
-              advocates, we deliver intuitive, scalable, and cost-effective
-              solutions to startups and big companies alike.
-            </h4>
-            <div className="flex text-center gap-[20px] md:gap-[50px] pb-[50px]">
-              <div>
-                <h1 className="text-[42px]">50+</h1>
-                <h5>software experts</h5>
-              </div>
-              <div>
-                <h1 className="text-[42px]">7</h1>
-                <h5>years on the market</h5>
-              </div>
-              <div>
-                <h1 className="text-[42px]">30+</h1>
-                <h5>projects delivered</h5>
-              </div>
+      >
+        <div>
+          <h1 className="pb-[15px] lg:pt-[70px]">Alfapoint in short</h1>
+          <h4 className="pb-[24px]">
+            We are an international software development company that supports
+            all types of organizations in digital and technical transformation.
+          </h4>
+          <h4 className="pb-[50px]">
+            Since 2016, we have been working with businesses looking to turn
+            their ideas into next-gen digital products. As custom software
+            advocates, we deliver intuitive, scalable, and cost-effective
+            solutions to startups and big companies alike.
+          </h4>
+          <div className="flex text-center gap-[20px] md:gap-[50px] pb-[50px]">
+            <div>
+              <h1 className="text-[42px]">50+</h1>
+              <h5>software experts</h5>
             </div>
-            <button
-              className="text-white rounded bg-regal-blue pl-[25px] pr-[25px] leading-[40px] mb-[50px]"
-              onClick={() => setOpen(true)}
-            >
-              <h5 className="inline-block">GET IN TOUCH</h5>
-              <Image
-                height={12}
-                width={15}
-                alt=""
-                src="/button-arrow-white.svg"
-                className="inline-block ml-[6px]"
-              ></Image>
-            </button>
-          </div>
-          <div>
-            <h1 className="pb-[30px] md:hidden">Our approach</h1>
-            <div className="py-[50px] px-[25px] bg-white mb-[25px]">
-              <Image
-                height={55}
-                width={55}
-                alt=""
-                src="/home/transparency.svg"
-                className="pb-[25px]"
-              ></Image>
-              <h2 className="pb-[10px]">Transparency in processes</h2>
-              <p>
-                Our processes are fully transparent and Client has access to all
-                aspects of the product development at any stage.
-              </p>
+            <div>
+              <h1 className="text-[42px]">7</h1>
+              <h5>years on the market</h5>
             </div>
-            <div className="py-[50px] px-[25px] bg-white mb-[25px]">
-              <Image
-                height={55}
-                width={55}
-                alt=""
-                src="/home/customer-satisfaction.svg"
-                className="pb-[25px]"
-              ></Image>
-              <h2 className="pb-[10px]">Customer satisfaction</h2>
-              <p>
-                Our company has a proven 90% Client retention rate after the
-                first project.
-              </p>
-            </div>
-            <div className="py-[50px] px-[25px] bg-white">
-              <Image
-                height={55}
-                width={55}
-                alt=""
-                src="/home/flexibility.svg"
-                className="pb-[25px]"
-              ></Image>
-              <h2 className="pb-[10px]">Flexibility</h2>
-              <p>
-                We know that things change quickly so only several weeks of
-                notice is necessary to cancel or change a Contract.
-              </p>
+            <div>
+              <h1 className="text-[42px]">30+</h1>
+              <h5>projects delivered</h5>
             </div>
           </div>
-          </motion.section>
-          <motion.section
-          className=" py-[50px] px-[25px] md:px-[50px] text-[#161616] md:gap-[50px] md:grid"
-          {...fadeIn}>
-            <section className="py-[50px] px-[25px] md:px-[50px] text-black">
-              <h1 className="text-[#161616] pb-[50px] md:pb-[100px]">
-                Services we offer
-              </h1>
-              <div className="flex flex-col gap-[50px] lg:gap-[25px] md:grid md:grid-cols-2 md-grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
-                <Link href="/services/custom-software-development">
-                  <div className="group relative cursor-pointer h-[100%]">
-                    <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-                      <Image
-                        height={70}
-                        width={70}
-                        alt=""
-                        src="/home/custom-software.svg"
-                        className="pb-[25px]"
-                      ></Image>
-                      <h2 className="pb-[25px]">Custom Software development</h2>
-                      <p>
-                        We work with startups, SMEs & world leading enterprises to
-                        build customized software solutions
-                      </p>
-                    </div>
-                    <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-                      EXPLORE
-                    </h6>
-                  </div>
-                </Link>
-                <Link href="/services/dedicated-teams">
-                  <div className="group relative cursor-pointer h-[100%]">
-                    <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-                      <Image
-                        height={70}
-                        width={70}
-                        alt=""
-                        src="/home/dedicated-teams.svg"
-                        className="pb-[25px]"
-                      ></Image>
-                      <h2 className="pb-[25px]">Dedicated teams</h2>
-                      <p>
-                        We grow your team using our development resources and
-                        recruiting capabilities
-                      </p>
-                    </div>
-                    <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-                      EXPLORE
-                    </h6>
-                  </div>
-                </Link>
-                <Link href="/services/ui-ux-design">
-                  <div className="group relative cursor-pointer h-[100%]">
-                    <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-                      <Image
-                        height={70}
-                        width={70}
-                        alt=""
-                        src="/home/ui:ux.svg"
-                        className="pb-[25px]"
-                      ></Image>
-                      <h2 className="pb-[25px]">UI/UX Design</h2>
-                      <p>
-                        Our team of experienced product designers & developers help
-                        you build successful digital products
-                      </p>
-                    </div>
-                    <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-                      EXPLORE
-                    </h6>
-                  </div>
-                </Link>
-                <Link href="/services/data-science">
-                  <div className="group relative cursor-pointer h-[100%]">
-                    <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
-                      <Image
-                        height={70}
-                        width={70}
-                        alt=""
-                        src="/home/data-science.svg"
-                        className="pb-[25px]"
-                      ></Image>
-                      <h2 className="pb-[25px]">Data science</h2>
-                      <p>
-                        We help organizations adopt data driven insights and automated
-                        reporting for faster decision making
-                      </p>
-                    </div>
-                    <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
-                      EXPLORE
-                    </h6>
-                  </div>
-                </Link>
-              </div>
-            </section>
+          <button
+            className="text-white rounded bg-regal-blue pl-[25px] pr-[25px] leading-[40px] mb-[50px]"
+            onClick={() => setOpen(true)}
+          >
+            <h5 className="inline-block">GET IN TOUCH</h5>
+            <Image
+              height={12}
+              width={15}
+              alt=""
+              src="/button-arrow-white.svg"
+              className="inline-block ml-[6px]"
+            ></Image>
+          </button>
+        </div>
+        <div>
+          <h1 className="pb-[30px] md:hidden">Our approach</h1>
+          <div className="py-[50px] px-[25px] bg-white mb-[25px]">
+            <Image
+              height={55}
+              width={55}
+              alt=""
+              src="/home/transparency.svg"
+              className="pb-[25px]"
+            ></Image>
+            <h2 className="pb-[10px]">Transparency in processes</h2>
+            <p>
+              Our processes are fully transparent and Client has access to all
+              aspects of the product development at any stage.
+            </p>
+          </div>
+          <div className="py-[50px] px-[25px] bg-white mb-[25px]">
+            <Image
+              height={55}
+              width={55}
+              alt=""
+              src="/home/customer-satisfaction.svg"
+              className="pb-[25px]"
+            ></Image>
+            <h2 className="pb-[10px]">Customer satisfaction</h2>
+            <p>
+              Our company has a proven 90% Client retention rate after the first
+              project.
+            </p>
+          </div>
+          <div className="py-[50px] px-[25px] bg-white">
+            <Image
+              height={55}
+              width={55}
+              alt=""
+              src="/home/flexibility.svg"
+              className="pb-[25px]"
+            ></Image>
+            <h2 className="pb-[10px]">Flexibility</h2>
+            <p>
+              We know that things change quickly so only several weeks of notice
+              is necessary to cancel or change a Contract.
+            </p>
+          </div>
+        </div>
       </motion.section>
       <motion.section
-      className="md:grid"
-      {...fadeIn}>
+        className=" py-[50px] px-[25px] md:px-[50px] text-[#161616] md:gap-[50px] md:grid"
+        {...fadeIn}
+      >
+        <section className="py-[50px] px-[25px] md:px-[50px] text-black">
+          <h1 className="text-[#161616] pb-[50px] md:pb-[100px]">
+            Services we offer
+          </h1>
+          <div className="flex flex-col gap-[50px] lg:gap-[25px] md:grid md:grid-cols-2 md-grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
+            <Link href="/services/custom-software-development">
+              <div className="group relative cursor-pointer h-[100%]">
+                <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                  <Image
+                    height={70}
+                    width={70}
+                    alt=""
+                    src="/home/custom-software.svg"
+                    className="pb-[25px]"
+                  ></Image>
+                  <h2 className="pb-[25px]">Custom Software development</h2>
+                  <p>
+                    We work with startups, SMEs & world leading enterprises to
+                    build customized software solutions
+                  </p>
+                </div>
+                <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                  EXPLORE
+                </h6>
+              </div>
+            </Link>
+            <Link href="/services/dedicated-teams">
+              <div className="group relative cursor-pointer h-[100%]">
+                <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                  <Image
+                    height={70}
+                    width={70}
+                    alt=""
+                    src="/home/dedicated-teams.svg"
+                    className="pb-[25px]"
+                  ></Image>
+                  <h2 className="pb-[25px]">Dedicated teams</h2>
+                  <p>
+                    We grow your team using our development resources and
+                    recruiting capabilities
+                  </p>
+                </div>
+                <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                  EXPLORE
+                </h6>
+              </div>
+            </Link>
+            <Link href="/services/ui-ux-design">
+              <div className="group relative cursor-pointer h-[100%]">
+                <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                  <Image
+                    height={70}
+                    width={70}
+                    alt=""
+                    src="/home/ui:ux.svg"
+                    className="pb-[25px]"
+                  ></Image>
+                  <h2 className="pb-[25px]">UI/UX Design</h2>
+                  <p>
+                    Our team of experienced product designers & developers help
+                    you build successful digital products
+                  </p>
+                </div>
+                <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                  EXPLORE
+                </h6>
+              </div>
+            </Link>
+            <Link href="/services/data-science">
+              <div className="group relative cursor-pointer h-[100%]">
+                <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
+                  <Image
+                    height={70}
+                    width={70}
+                    alt=""
+                    src="/home/data-science.svg"
+                    className="pb-[25px]"
+                  ></Image>
+                  <h2 className="pb-[25px]">Data science</h2>
+                  <p>
+                    We help organizations adopt data driven insights and
+                    automated reporting for faster decision making
+                  </p>
+                </div>
+                <h6 className="bg-regal-blue h-[25px] leading-[25px] absolute bottom-0 w-full text-center text-white opacity-[0%] group-hover:opacity-[100%] transition-all duration-100 ease-in-out">
+                  EXPLORE
+                </h6>
+              </div>
+            </Link>
+          </div>
+        </section>
+      </motion.section>
+      <motion.section className="md:grid" {...fadeIn}>
         <section className="py-[50px] px-[25px] md:px-[50px] bg-regal-blue">
           <h1 className="pb-[50px]">How do we work?</h1>
           <div className="text-black flex flex-col gap-[25px] md:grid md:grid-cols-2 md:grid-rows-1">
@@ -361,9 +358,9 @@ export default function Home() {
               ></Image>
               <h2 className="pb-[25px]">Dedicated teams model</h2>
               <p>
-                Whether you’re a fast-growing startup or multinational enterprise,
-                our dedicated engineering teams are hand-picked to help you start
-                and scale product development quickly.
+                Whether you’re a fast-growing startup or multinational
+                enterprise, our dedicated engineering teams are hand-picked to
+                help you start and scale product development quickly.
               </p>
             </div>
             <div className="p-[25px] md:p-[50px] lg:pr-[175px] bg-white">
@@ -380,16 +377,14 @@ export default function Home() {
                 company’s growth. Not only can we develop your project from
                 scratch, but we excel at business analysis, technical
                 documentation, prototyping, design, software development, and
-                quality assurance — all while optimizing the cost, timeframe, and
-                scope of the work
+                quality assurance — all while optimizing the cost, timeframe,
+                and scope of the work
               </p>
             </div>
           </div>
         </section>
       </motion.section>
-      <motion.section
-      className="md:grid"
-      {...fadeIn}>
+      <motion.section className="md:grid" {...fadeIn}>
         <section className="py-[50px] px-[25px] md:px-[50px] bg-grey-2">
           <h1 className="pb-[25px] text-[#161616]">Meet our people</h1>
           <p className="pb-[25px] text-black">
@@ -483,9 +478,7 @@ export default function Home() {
           </Swiper>
         </section>
       </motion.section>
-      <motion.section
-      className="md:grid"
-      {...fadeIn}>
+      <motion.section className="md:grid" {...fadeIn}>
         <section className="py-[50px] px-[25px] text-[#161616] md:px-[50px]">
           <h1 className="pb-[50px]">Benefits of working with us</h1>
           <div className="flex flex-col gap-[25px] min-[600px]:grid min-[600px]:grid-cols-2 min-[600px]:grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
@@ -512,9 +505,9 @@ export default function Home() {
               <div className="h-[100px] w-[100px] rounded-full bg-[#ccd6e581] bg-[url('/home/best.svg')] bg-no-repeat bg-center mb-[15px]"></div>
               <h2 className="pb-[15px]">Only the best</h2>
               <p>
-                We are a tech-oriented company with a rigorous selection process.
-                Our partners and clients have access to the top 2% of talent that
-                passes our in-depth application process.
+                We are a tech-oriented company with a rigorous selection
+                process. Our partners and clients have access to the top 2% of
+                talent that passes our in-depth application process.
               </p>
             </div>
             <div>
@@ -528,7 +521,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </motion.section>  
+      </motion.section>
       <IconSlider></IconSlider>
       <section className="py-[50px] md:pb-0 px-[25px] md:px-[25px] lg:px-[50] md:mx-[50px] bg-regal-blue md:grid md:grid-cols-6 md:gap-[50px] md:pt-[100px]">
         <TechStack></TechStack>
