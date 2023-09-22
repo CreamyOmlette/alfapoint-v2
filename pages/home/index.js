@@ -88,9 +88,15 @@ export default function Home() {
           open={isOpen}
         ></PopupModal>
       )}
-      <section className="h-[100vh] relative">
+      <section className="h-[800px] sm:h-[100vh] relative">
         <div className={`w-[100%] h-[100%] absolute z-0`}>
-          <video autoPlay muted loop playsInline className="w-[100%] h-[100%] object-cover">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-[100%] h-[100%] object-cover"
+          >
             <source src="/home/home.mp4" type="video/mp4" />
           </video>
         </div>
