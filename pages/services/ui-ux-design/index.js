@@ -82,7 +82,7 @@ export default function UiUxDesign() {
               fonts — match their needs and your vision.
             </p>
             <h2 className="pb-[25px]">What is our approach?</h2>
-            <ul className="flex flex-col gap-[15px] leading-[39px] pb-[50px]">
+            <ul className="flex flex-col gap-[25px] leading-[24px] pb-[50px]">
               <li className="pl-[50px] bg-[url('/services/🤿.svg')] bg-no-repeat bg-left bg-center">
                 We do a deep dive to understand what key features will resonate.
               </li>

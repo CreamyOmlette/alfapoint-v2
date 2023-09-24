@@ -140,7 +140,7 @@ export default function CustomSoftwareDevelopment() {
               problems and achieve their goals.
             </p>
             <h2 className="pb-[25px]">This means:</h2>
-            <ul className="flex flex-col gap-[15px] leading-[39px] pb-[50px]">
+            <ul className="flex flex-col gap-[25px] leading-[24px] pb-[50px]">
               <li className="pl-[50px] bg-[url('/services/👋.svg')] bg-no-repeat bg-left bg-center">
                 We ask essential questions
               </li>
