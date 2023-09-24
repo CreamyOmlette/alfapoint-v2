@@ -80,7 +80,7 @@ export default function DedicatedTeams() {
             <h2 className="pb-[25px]">
             What are the benefits of dedicated teams model?
             </h2>
-            <ul className="flex flex-col gap-[25px] leading-[24px] pb-[50px]">
+            <ul className="flex flex-col gap-[15px] leading-[24px] pb-[50px]">
               <li className="pl-[50px] bg-[url('/services/💎.svg')] bg-no-repeat bg-left bg-center">
                 Reducing time and financial expenses by up to 25% on recruitment
                 and staff maintenance.

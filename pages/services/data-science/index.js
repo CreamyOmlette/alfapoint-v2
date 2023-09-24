@@ -59,7 +59,7 @@ export default function DataScience() {
               experience, and drive operational efficiency.
             </p>
             <h2 className="pb-[25px]">What is our approach?</h2>
-            <ul className="flex flex-col gap-[25px] leading-[24px] pb-[50px]">
+            <ul className="flex flex-col gap-[15px] leading-[24px] pb-[50px]">
               <li className="pl-[50px] bg-[url('/services/data-science/🧨.svg')] bg-no-repeat bg-left bg-center">
                 We develop a comprehensive strategy that encompasses the entire
                 data analytics process, including data collection,
