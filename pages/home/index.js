@@ -481,7 +481,7 @@ export default function Home() {
               </a>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="h-[560px] bg-[url('/home/vitya.jpg')] bg-no-repeat relative bg-cover">
+              <div className="h-[560px] bg-[url('/home/vitya.png')] bg-no-repeat relative bg-cover">
                 <div className="absolute left-[25px] bottom-[25px]">
                   <h2>Victor Uncuta</h2>
                   <small>Head of BD</small>
