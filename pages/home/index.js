@@ -481,14 +481,14 @@ export default function Home() {
               </a>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="h-[560px] bg-[url('/home/vitya.png')] bg-no-repeat relative bg-cover">
+              <div className="h-[560px] bg-[url('/home/alisa.jpg')] bg-no-repeat relative bg-cover">
                 <div className="absolute left-[25px] bottom-[25px]">
-                  <h2>Victor Uncuta</h2>
-                  <small>Head of BD</small>
+                  <h2>Alisa Rudenko</h2>
+                  <small>COO</small>
                 </div>
                 <a
                   className="absolute right-[25px] bottom-[25px] cursor-pointer"
-                  href="https://www.linkedin.com/in/victoruncuta/"
+                  href="https://www.linkedin.com/in/alisa-rudenko-9a8b08244/"
                 >
                   <Image
                     height={50}
