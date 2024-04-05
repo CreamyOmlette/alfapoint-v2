@@ -103,8 +103,8 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="text-[#171717] py-[13px] px-[15px] border-b-[1px] border-b-regal-blue bg-white hover:bg-regal-blue hover:text-white transition-colors duration-150 ease-in-out">
-                <Link href="/services/dedicated-teams">
-                  <h5>Dedicated teams</h5>
+                <Link href="/services/hr-services">
+                  <h5>HR Services</h5>
                 </Link>
               </li>
               <li className="text-[#171717] py-[13px] px-[15px] border-b-[1px] border-b-regal-blue bg-white hover:bg-regal-blue hover:text-white transition-colors duration-150 ease-in-out">
@@ -218,10 +218,10 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="/services/dedicated-teams"
+                      href="/services/hr-services"
                       onClick={() => setBurgerMenuActive(!burgerMenuActive)}
                     >
-                      <h5>Dedicated teams</h5>
+                      <h5>HR Services</h5>
                     </Link>
                   </li>
                   <li>

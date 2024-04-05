@@ -20,8 +20,8 @@ export default function Footer() {
             </Link>
           </li>
           <li className="hover:text-white transition-colors ease-out duration-200">
-            <Link href="/services/dedicated-teams">
-              <small>Dedicated teams</small>
+            <Link href="/services/hr-services">
+              <small>HR Services</small>
             </Link>
           </li>
           <li className="hover:text-white transition-colors ease-out duration-200">

@@ -55,11 +55,11 @@ export default function DedicatedTeams() {
                   Services
                 </h4>
                 <h4 className="pl-[17.14px] bg-[url('/services/arrow.svg')] bg-no-repeat bg-left bg-center">
-                  Dedicated teams
+                  HR Services
                 </h4>
               </div>
               <h1 className="pb-[25px] leading-[50px]">
-                Scale your business with dedicated development teams
+                Scale your business by securing top talent
               </h1>
               <button
                 className="bg-white rounded pl-[25px] pr-[25px] leading-[40px] text-black"

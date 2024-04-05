@@ -297,7 +297,7 @@ export default function Home() {
               </Link>
             </motion.div>
             <motion.div {...consecutiveFadeIn} custom={2}>
-              <Link href="/services/dedicated-teams">
+              <Link href="/services/hr-services">
                 <div className="group relative cursor-pointer h-[100%]">
                   <div className="p-[30px] h-full border-[1px] border-[#CCD6E5] md:group-hover:border-regal-blue  md:group-hover:-translate-y-[25px] transition-all duration-300 ease-in-out">
                     <Image
@@ -307,7 +307,7 @@ export default function Home() {
                       src="/home/dedicated-teams.svg"
                       className="pb-[25px]"
                     ></Image>
-                    <h2 className="pb-[25px]">Dedicated teams</h2>
+                    <h2 className="pb-[25px]">HR Services</h2>
                     <p>
                       We grow your team using our development resources and
                       recruiting capabilities
@@ -380,7 +380,7 @@ export default function Home() {
                 src="/home/dedicated-teams-model.svg"
                 className="pb-[25px]"
               ></Image>
-              <h2 className="pb-[25px]">Dedicated teams model</h2>
+              <h2 className="pb-[25px]">HR Services model</h2>
               <p>
                 Whether you’re a fast-growing startup or multinational
                 enterprise, our dedicated engineering teams are hand-picked to
